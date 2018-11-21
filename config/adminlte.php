@@ -135,6 +135,12 @@ return [
             'url'  => 'products/categories',
             'icon' => 'list',
         ],
+        'EVAC CENTER SETTINGS',
+        [
+            'text' => 'Center Registration',
+            'url'  => "/centers/listing",
+            'icon' => 'building',
+        ],
     ],
 
     /*

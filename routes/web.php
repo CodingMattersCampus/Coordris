@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/centers/listing', "Center\Listing")->name('center.listing');
+Route::post('/centers/registration', "Center\Registration")->name('centers.registration');
+Route::get('/centers/{center}/detail', "Center\Detail")->name('center.detail');
