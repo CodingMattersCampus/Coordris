@@ -22,6 +22,7 @@ class InfrastructureTableSeeder extends Seeder
         return [
             ['name' => "Building"],
             ['name' => "Gymnasium"],
+            ['name' => "Open Field"],
         ];
     }
 }
