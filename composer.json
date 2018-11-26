@@ -25,7 +25,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "TableSeeder\\Location\\": "database/seeds/Location/"
+            "TableSeeder\\Location\\": "database/seeds/Location/",
+            "TableSeeder\\Product\\": "database/seeds/Product/"
         }
     },
     "autoload-dev": {

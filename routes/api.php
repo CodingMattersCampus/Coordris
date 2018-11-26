@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,3 +12,9 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/centers/listing', "Center\Listing@getAllAsResourceCollection")->name('api.centers.listing');
+
+Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
+    Route::get('listing', "Listing@getAllAsResourceCollection")->name('api.products.listing');
+    Route::get('brands/listing', "Brand\Listing@getAllAsResourceCollection")->name('api.products.brands.listing');
+    Route::get('categories/listing', "Category\Listing@getAllAsResourceCollection")->name('api.products.categories.listing');
+});

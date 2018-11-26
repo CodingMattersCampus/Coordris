@@ -11,18 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+Route::group(['middleware' => 'guest'], function() {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 });
 
-Auth::routes();
+Route::group(['middleware' => "auth"], function() {
+    Route::get('/maps', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::group(['prefix' => 'centers', "namespace" => "Center"], function () {
+        Route::get('listing', "Listing")->name('center.listing');
+        Route::post('registration', "Registration")->name('centers.registration');
+        Route::get('{center}/detail', "Detail")->name('center.detail');
+    });
 
-Auth::routes();
+    Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
+        Route::get('listing', "Listing")->name('products.listing');
+        Route::post('registration', "Registration")->name('products.registration');
 
-Route::get('/home', 'HomeController@index')->name('home');
+        Route::post('categories', "Category\Registration")->name('product.category.registration');
+        Route::view('categories', 'product.category.listing')->name('product.categories.listing');
 
-Route::get('/centers/listing', "Center\Listing")->name('center.listing');
-Route::post('/centers/registration', "Center\Registration")->name('centers.registration');
-Route::get('/centers/{center}/detail', "Center\Detail")->name('center.detail');
+        Route::post('brands', "Brand\Registration")->name('product.brand.registration');
+        Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
+    });
+
+    Route::group(['prefix' => 'disasters', 'namespace' => "Disaster"], function(){
+        Route::get('listing', "Listing")->name('disasters.listing');
+    });
+});

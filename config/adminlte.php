@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'maps',
 
     'logout_url' => 'logout',
 
@@ -111,12 +111,12 @@ return [
         'REPORTS',
         [
             'text' => 'Maps',
-            'url'  => '/home',
+            'url'  => 'maps',
             'icon' => 'dashboard',
         ],
         [
             'text' => 'Dispense',
-            'url'  => '/dispense',
+            'url'  => 'dispense',
             'icon' => 'money',
         ],
         [
@@ -126,13 +126,18 @@ return [
         ],
         'PRODUCT SETTINGS',
         [
-            'text' => 'Product List',
+            'text' => 'Products',
             'url'  => 'products/listing',
             'icon' => 'database',
         ],
         [
             'text' => 'Category',
             'url'  => 'products/categories',
+            'icon' => 'list',
+        ],
+        [
+            'text' => 'Brands',
+            'url'  => 'products/brands',
             'icon' => 'list',
         ],
         'EVAC CENTER SETTINGS',
@@ -175,8 +180,8 @@ return [
     */
 
     'plugins' => [
-        'datatables' => true,
-        'select2'    => true,
-        'chartjs'    => true,
+        'datatables' => false,
+        'select2'    => false,
+        'chartjs'    => false,
     ],
 ];
