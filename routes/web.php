@@ -31,6 +31,8 @@ Route::group(['middleware' => "auth"], function() {
         Route::get('listing', "Listing")->name('products.listing');
         Route::post('registration', "Registration")->name('products.registration');
         Route::view('categories', 'product.category.listing')->name('product.categories.listing');
+
+        Route::post('brands', "Brand\Registration")->name('product.brand.registration');
         Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
     });
 });
