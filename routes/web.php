@@ -19,8 +19,17 @@ Route::group(['middleware' => 'guest'], function() {
 });
 
 Route::group(['middleware' => "auth"], function() {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/centers/listing', "Center\Listing")->name('center.listing');
-    Route::post('/centers/registration', "Center\Registration")->name('centers.registration');
-    Route::get('/centers/{center}/detail', "Center\Detail")->name('center.detail');
+    Route::get('/maps', 'HomeController@index')->name('home');
+
+    Route::group(['prefix' => 'centers', "namespace" => "Center"], function () {
+        Route::get('listing', "Listing")->name('center.listing');
+        Route::post('registration', "Registration")->name('centers.registration');
+        Route::get('{center}/detail', "Detail")->name('center.detail');
+    });
+
+    Route::group(['prefix' => 'products'], function () {
+        Route::view('listing', 'product.listing')->name('products.listing');
+        Route::view('categories', 'product.category.listing')->name('product.categories.listing');
+        Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
+    });
 });
