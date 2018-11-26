@@ -13,8 +13,9 @@ class Registration extends Controller
     {
         $data = $request->post();
         $data['slug'] = str_slug($data['name']);
+        unset ($data['_token']);
 
-        $center = Center::create($data);
+        $center = Center::firstOrCreate($data);
 
         return redirect()->route('center.detail', compact('center'));
     }
