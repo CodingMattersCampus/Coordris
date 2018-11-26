@@ -22,7 +22,7 @@
                 <input class="form-control" type="text" name="name" id="name" placeholder="Example: Coca Cola">
             </div>
             <div class="form-goup">
-                <button class="btn btn-block btn-primary">Save</button>
+                <button class="btn btn-lg btn-block btn-primary">Save</button>
             </div>
         </form>
     </div>
