@@ -37,4 +37,8 @@ Route::group(['middleware' => "auth"], function() {
         Route::post('brands', "Brand\Registration")->name('product.brand.registration');
         Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
     });
+
+    Route::group(['prefix' => 'disasters', 'namespace' => "Disaster"], function(){
+        Route::get('listing', "Listing")->name('disasters.listing');
+    });
 });

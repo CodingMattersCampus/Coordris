@@ -26,7 +26,11 @@ class CitiesTableSeeder extends Seeder
             [
                 'code'  => "ILGN",
                 'name'  => "Iligan"
-            ]
+            ],
+            [
+                'code'  => "CDO",
+                'name'  => "Cagayan de Oro"
+            ],
         ];
     }
 }
