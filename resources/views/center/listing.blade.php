@@ -53,3 +53,9 @@
     <div class="col-md-8"></div>
 </div>
 @stop
+@push('css')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endpush
+@push('js')
+<script type="text/javascript" src="{{\asset('js/app.js')}}"></script>
+@endpush
