@@ -3,7 +3,7 @@
 namespace Tests\Feature\EvacuationCenter;
 
 use App\Models\Center;
-use App\User;
+use App\Models\User\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
