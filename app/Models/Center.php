@@ -11,6 +11,11 @@ class Center extends Model
 {
     protected $guarded = [];
 
+    /**
+     * Override by using 'slug' (column) instead of id
+     *
+     * @return string
+     */
     public function getRouteKeyName()
     {
         return 'slug';
