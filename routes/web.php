@@ -30,6 +30,8 @@ Route::group(['middleware' => "auth"], function() {
     Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
         Route::get('listing', "Listing")->name('products.listing');
         Route::post('registration', "Registration")->name('products.registration');
+
+        Route::post('categories', "Category\Registration")->name('product.category.registration');
         Route::view('categories', 'product.category.listing')->name('product.categories.listing');
 
         Route::post('brands', "Brand\Registration")->name('product.brand.registration');

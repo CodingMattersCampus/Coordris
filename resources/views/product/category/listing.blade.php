@@ -6,7 +6,7 @@
 @section('content')
 <div id="app" class="row">
     <div class="col-md-3">
-        <form action="#" method="POST">
+        <form action="{{route('product.category.registration')}}" method="POST">
             @csrf
             @if ($errors->any())
                 <div class="alert alert-danger text-xs">
@@ -22,7 +22,7 @@
                 <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Sendong Survivors Center">
             </div>
             <div class="form-goup">
-                <button class="btn btn-block btn-primary">Register</button>
+                <button class="btn btn-lg btn-block btn-primary">Register</button>
             </div>
         </form>
     </div>
@@ -32,7 +32,7 @@
                 <h4 class="box-title text-capitalize">Product Category Summary</h4>
             </div>
             <div class="box-body">
-                <table id="centers-table" class="table table-responsive table-striped table-hover">
+                <table id="categories-table" class="table table-responsive table-striped table-hover">
                     <thead class="bg-blue-gradient">
                     <tr>
                         <th>Name</th>
@@ -53,4 +53,21 @@
 <script type="text/javascript" src="{{\asset('js/app.js')}}"></script>
 <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('vendor/mdb/js/mdb.min.js')}}"></script>
+<script>
+    $(function() {
+        var table = $('#categories-table').DataTable({
+            "dom": 'Bfrtip',
+            "buttons": [
+                'pageLength', 'pdf', 'csv'
+            ],
+            "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            "serverSide": true,
+            "deferRender": true,
+            "columns": [
+                { "data": "name", "orderable": false, "searchable": true },
+            ],
+            "ajax": "{{\route('api.products.categories.listing')}}"
+        });
+    });
+</script>
 @endpush
