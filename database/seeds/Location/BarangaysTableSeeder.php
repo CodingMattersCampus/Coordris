@@ -24,10 +24,30 @@ class BarangaysTableSeeder extends Seeder
     {
        return [
            [
+               'code' => 'HPLN',
+               'name' => "Hinaplanon",
+               'city_code' => City::getIdByCode('ILGN'),
+           ],
+           [
+               'code' => 'LUNB',
+               'name' => "Luinab",
+               'city_code' => City::getIdByCode('ILGN'),
+           ],
+           [
+               'code' => 'PLAO',
+               'name' => "Pala-o",
+               'city_code' => City::getIdByCode('ILGN'),
+           ],
+           [
                'code' => 'TBNGA',
                'name' => "Tibanga",
                'city_code' => City::getIdByCode('ILGN'),
-           ]
+           ],
+           [
+               'code' => 'TUBD',
+               'name' => "Tubod",
+               'city_code' => City::getIdByCode('ILGN'),
+           ],
        ];
     }
 }
