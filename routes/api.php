@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/centers/listing', "Center\Listing@getAllAsResourceCollection")->name('api.centers.listing');
+Route::get('products/listing', "Product\Listing@getAllAsResourceCollection")->name('api.products.listing');

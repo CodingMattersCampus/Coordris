@@ -27,8 +27,9 @@ Route::group(['middleware' => "auth"], function() {
         Route::get('{center}/detail', "Detail")->name('center.detail');
     });
 
-    Route::group(['prefix' => 'products'], function () {
-        Route::view('listing', 'product.listing')->name('products.listing');
+    Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
+        Route::get('listing', "Listing")->name('products.listing');
+        Route::post('registration', "Registration")->name('products.registration');
         Route::view('categories', 'product.category.listing')->name('product.categories.listing');
         Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
     });
