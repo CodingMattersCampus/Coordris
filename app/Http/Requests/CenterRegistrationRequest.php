@@ -25,7 +25,7 @@ class CenterRegistrationRequest extends FormRequest
     {
         return [
             'name'  => "required|string",
-            'city_id' => "required|integer",
+            // 'city_id' => "required|integer",
             'barangay_id' => "required|integer",
             'infrastructure_id' => "required|integer",
         ];
