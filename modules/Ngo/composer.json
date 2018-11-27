@@ -1,0 +1,25 @@
+{
+    "name": "coordrris/ngo",
+    "description": "",
+    "authors": [
+        {
+            "name": "Camzy Llamas",
+            "email": "cllamas@example.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Ngo\\Providers\\NgoServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Ngo\\": ""
+        }
+    }
+}

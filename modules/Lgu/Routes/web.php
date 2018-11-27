@@ -11,8 +11,6 @@
 |
 */
 
-//Auth::routes();
-
 Route::group(['middleware' => 'guest'], function() {
     Route::view('login', "lgu::user.login")->name('lgu.login');
     Route::post('login', "User\Authentication\Login")->name('lgu.login.attempt');
