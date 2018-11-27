@@ -64,7 +64,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::domain('api.' . \config('app.domain'))
             ->prefix('lgu')
-            ->middleware('api')
+            ->middleware(['api', 'cors'])
             ->namespace($this->namespace)
             ->group(__DIR__ . '/../Routes/api.php');
     }
