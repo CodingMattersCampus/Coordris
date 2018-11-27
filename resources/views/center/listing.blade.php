@@ -21,14 +21,14 @@
                 <label for="#centerName">Center Name:</label>
                 <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Sendong Survivors Center">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="#city">Select City:</label>
                 <select id="city" name="city_id" class="form-control">
                     @foreach($cities as $city)
                         <option class="form-control" value="{{$city->id}}"> {{$city->name}}</option>
                     @endforeach
                 </select>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="#barangay">Select Baranagay:</label>
                 <select id="barangay" name="barangay_id" class="form-control">
