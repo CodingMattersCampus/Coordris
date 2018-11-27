@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Disaster;
+namespace Modules\Lgu\Http\Controllers\Disaster;
 
 use App\Models\Disaster\DisasterType;
 use App\Models\Location\Barangay;

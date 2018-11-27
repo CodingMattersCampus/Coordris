@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Product\Category;
+namespace Modules\Lgu\Http\Controllers\Product\Category;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Product\Category\Category as CategoryResource;

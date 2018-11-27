@@ -85,15 +85,15 @@ return [
     |
     */
 
-    'dashboard_url' => 'maps',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
-    'logout_method' => null,
+    'logout_method' => "POST",
 
     'login_url' => 'login',
 
-    'register_url' => 'register',
+    'register_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -107,46 +107,7 @@ return [
     |
     */
 
-    'menu' => [
-        'REPORTS',
-        [
-            'text' => 'Maps',
-            'url'  => 'maps',
-            'icon' => 'dashboard',
-        ],
-        [
-            'text' => 'Dispense',
-            'url'  => 'dispense',
-            'icon' => 'money',
-        ],
-        [
-            'text' => 'Forum',
-            'url'  => 'forum',
-            'icon' => 'users',
-        ],
-        'PRODUCT SETTINGS',
-        [
-            'text' => 'Products',
-            'url'  => 'products/listing',
-            'icon' => 'database',
-        ],
-        [
-            'text' => 'Category',
-            'url'  => 'products/categories',
-            'icon' => 'list',
-        ],
-        [
-            'text' => 'Brands',
-            'url'  => 'products/brands',
-            'icon' => 'list',
-        ],
-        'EVAC CENTER SETTINGS',
-        [
-            'text' => 'Center Registration',
-            'url'  => "/centers/listing",
-            'icon' => 'building',
-        ],
-    ],
+    'menu' => [], // leave this as is
 
     /*
     |--------------------------------------------------------------------------

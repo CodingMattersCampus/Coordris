@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Product\Brand;
+namespace Modules\Lgu\Http\Controllers\Product\Brand;
 
 use App\Http\Requests\BrandRegistrationRequest;
 use App\Http\Controllers\Controller;

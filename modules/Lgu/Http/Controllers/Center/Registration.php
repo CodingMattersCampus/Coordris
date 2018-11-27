@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Center;
+namespace Modules\Lgu\Http\Controllers\Center;
 
 use App\Http\Requests\CenterRegistrationRequest;
 use App\Models\Center;

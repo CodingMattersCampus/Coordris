@@ -1,0 +1,25 @@
+{
+    "name": "coordrris/lgu",
+    "description": "",
+    "authors": [
+        {
+            "name": "Camzy Llamas",
+            "email": "cllamas@example.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Lgu\\Providers\\LguServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Lgu\\": ""
+        }
+    }
+}

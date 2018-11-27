@@ -11,34 +11,8 @@
 |
 */
 
-Auth::routes();
-Route::group(['middleware' => 'guest'], function() {
+Route::group(['domain' => 'www.' . \config('app.domain')], function() {
     Route::get('/', function () {
-        return view('welcome');
-    });
-});
-
-Route::group(['middleware' => "auth"], function() {
-    Route::get('/maps', 'HomeController@index')->name('home');
-
-    Route::group(['prefix' => 'centers', "namespace" => "Center"], function () {
-        Route::get('listing', "Listing")->name('center.listing');
-        Route::post('registration', "Registration")->name('centers.registration');
-        Route::get('{center}/detail', "Detail")->name('center.detail');
-    });
-
-    Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
-        Route::get('listing', "Listing")->name('products.listing');
-        Route::post('registration', "Registration")->name('products.registration');
-
-        Route::post('categories', "Category\Registration")->name('product.category.registration');
-        Route::view('categories', 'product.category.listing')->name('product.categories.listing');
-
-        Route::post('brands', "Brand\Registration")->name('product.brand.registration');
-        Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
-    });
-
-    Route::group(['prefix' => 'disasters', 'namespace' => "Disaster"], function(){
-        Route::get('listing', "Listing")->name('disasters.listing');
+        return view('welcome')->name('site.index');
     });
 });

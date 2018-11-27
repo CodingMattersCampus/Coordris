@@ -15,7 +15,24 @@ class Authenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return route('login');
+            switch ($this->subdomain($request->getHost())) {
+                case "lgu":
+                    $loginPath = 'lgu.login';
+                    break;
+                case "ngo":
+                    $loginPath = 'ngo.login';
+                    break;
+                default:
+                    $loginPath = 'ngo.login';
+                    break;
+            }
+
+            return route($loginPath);
         }
+    }
+
+    protected function subdomain(string $domain) : string
+    {
+        return substr($domain, 0, strpos($domain, '.'));
     }
 }

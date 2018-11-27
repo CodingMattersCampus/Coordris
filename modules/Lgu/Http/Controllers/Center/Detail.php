@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Center;
+namespace Modules\Lgu\Http\Controllers\Center;
 
 use App\Http\Controllers\Controller;
 use App\Models\Center;
