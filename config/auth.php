@@ -41,6 +41,16 @@ return [
             'provider' => 'users',
         ],
 
+        'lgu' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'ngo' => [
+            'driver'    => 'session',
+            'provider'  => 'volunteers',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +78,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User\User::class,
+        ],
+
+        'volunteers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User\Volunteer::class,
         ],
 
         // 'users' => [
