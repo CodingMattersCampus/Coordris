@@ -22,14 +22,6 @@
                 <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Sendong Survivors Center">
             </div>
             <div class="form-group">
-                <label for="#city">Select City:</label>
-                <select id="city" name="city_id" class="form-control">
-                    @foreach($cities as $city)
-                        <option class="form-control" value="{{$city->id}}"> {{$city->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="#barangay">Select Baranagay:</label>
                 <select id="barangay" name="barangay_id" class="form-control">
                     @foreach($barangays as $barangay)
@@ -96,7 +88,7 @@
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },
             ],
-            "ajax": "{{\route('api.centers.listing')}}"
+            "ajax": "{{\route('api.lgu.centers.listing', \compact('lgu'))}}"
         });
         //click rows
         $('#centers-table tbody').on('click', 'tr', function () {

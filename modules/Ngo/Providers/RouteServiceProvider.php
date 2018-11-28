@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Lgu\Providers;
+namespace Modules\Ngo\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -12,7 +12,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Modules\Lgu\Http\Controllers';
+    protected $namespace = 'Modules\Ngo\Http\Controllers';
 
     /**
      * Called before routes are registered.
@@ -47,8 +47,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::domain('lgu.' . \config('app.domain'))
-            ->middleware('web')
+        Route::middleware('web')
             ->namespace($this->namespace)
             ->group(__DIR__ . '/../Routes/web.php');
     }
@@ -63,7 +62,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::domain('api.' . \config('app.domain'))
-            ->prefix('lgu')
+            ->prefix('ngo')
             ->middleware(['api', 'cors'])
             ->namespace($this->namespace)
             ->group(__DIR__ . '/../Routes/api.php');

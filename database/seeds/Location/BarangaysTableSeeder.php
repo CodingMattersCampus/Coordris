@@ -48,6 +48,31 @@ class BarangaysTableSeeder extends Seeder
                'name' => "Tubod",
                'city_code' => City::getIdByCode('ILGN'),
            ],
+           [
+               'code' => 'BIKGN',
+               'name' => "Baikingon",
+               'city_code' => City::getIdByCode('CDO'),
+           ],
+           [
+               'code' => 'BYBS',
+               'name' => "Bayabas",
+               'city_code' => City::getIdByCode('CDO'),
+           ],
+           [
+               'code' => 'BUGO',
+               'name' => "Bugo",
+               'city_code' => City::getIdByCode('CDO'),
+           ],
+           [
+               'code' => 'MCSDG',
+               'name' => "Macasandig",
+               'city_code' => City::getIdByCode('CDO'),
+           ],
+           [
+               'code' => 'TBLN',
+               'name' => "Tablon",
+               'city_code' => City::getIdByCode('CDO'),
+           ],
        ];
     }
 }

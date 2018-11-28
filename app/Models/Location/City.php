@@ -14,4 +14,11 @@ class City extends Model
 
         return (int) $city->id ?? 0;
     }
+
+    public static function getIdByName(string $name) : int
+    {
+        $city = self::whereName($name)->first();
+
+        return (int) $city->id ?? 0;
+    }
 }

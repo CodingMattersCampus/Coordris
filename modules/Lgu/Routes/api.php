@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('{lgu}/centers/listing', "Lgu\Center\Listing@getAllAsResourceCollection")->name('api.lgu.centers.listing');
 Route::get('/centers/listing', "Center\Listing@getAllAsResourceCollection")->name('api.centers.listing');
 
 Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
