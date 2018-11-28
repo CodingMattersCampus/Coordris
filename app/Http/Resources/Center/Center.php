@@ -20,6 +20,7 @@ class Center extends JsonResource
             'structure' => $this->structureType(),
             'city'      => $this->cityLocation(),
             'barangay'  => $this->barangayLocation(),
+            'support'   => $this->supportFor(),
         ];
     }
 }

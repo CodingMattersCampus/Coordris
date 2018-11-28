@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Center\Infrastructure;
+use App\Models\Disaster\Disaster;
 use App\Models\Location\Barangay;
 use App\Models\Location\City;
 use Illuminate\Database\Eloquent\Model;
@@ -39,5 +40,10 @@ class Center extends Model
     public function structureType()
     {
         return (Infrastructure::find($this->infrastructure_id))->name;
+    }
+
+    public function supportFor()
+    {
+        return (Disaster::find($this->disaster_id))->name;
     }
 }

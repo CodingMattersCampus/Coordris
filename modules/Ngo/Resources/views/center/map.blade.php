@@ -19,6 +19,7 @@
                         <th>Infrastructure</th>
                         <th>Barangay</th>
                         <th>City</th>
+                        <th>Disaster Support</th>
                     </tr>
                     </thead>
                 </table>
@@ -51,6 +52,7 @@
                     { "data": "structure", "orderable": false, "searchable": true },
                     { "data": "barangay", "orderable": false, "searchable": true},
                     { "data": "city", "orderable": false, "searchable": true },
+                    { "data": "support", "orderable": false, "searchable": true },
                 ],
                 "ajax": "{{\route('api.centers.listing')}}"
             });
