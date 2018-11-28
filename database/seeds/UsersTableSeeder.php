@@ -24,6 +24,7 @@ class UsersTableSeeder extends Seeder
                 'email' => "admin@admin.com",
                 'password' => \Illuminate\Support\Facades\Hash::make("123456"),
                 'remember_token' => str_random(),
+                'city_id'   => \App\Models\Location\City::getIdByName('Iligan'),
             ],
         ];
     }
