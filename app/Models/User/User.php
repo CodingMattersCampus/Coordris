@@ -28,8 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public static function getCityId()
+    public function getCityId() : int
     {
-        return 1;
+        return $this->city_id;
     }
 }
