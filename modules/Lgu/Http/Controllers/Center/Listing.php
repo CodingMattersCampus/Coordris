@@ -10,6 +10,7 @@ use App\Models\Center\Infrastructure;
 use App\Models\Location\Barangay;
 use App\Models\Location\City;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Yajra\DataTables\DataTables;
 
@@ -17,11 +18,12 @@ class Listing extends Controller
 {
     public function __invoke() : View
     {
+        $lgu = Auth::guard('lgu')->user();
         $cities = City::all();
         $barangays = Barangay::all();
         $infrastructures = Infrastructure::all();
 
-        return \view('center.listing', \compact('cities', 'barangays', 'infrastructures'));
+        return \view('center.listing', \compact('cities', 'barangays', 'infrastructures', 'lgu'));
     }
 
     public function getAllAsResourceCollection()

@@ -96,7 +96,7 @@
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },
             ],
-            "ajax": "{{\route('api.centers.listing')}}"
+            "ajax": "{{\route('api.lgu.centers.listing', \compact('lgu'))}}"
         });
         //click rows
         $('#centers-table tbody').on('click', 'tr', function () {
