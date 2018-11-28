@@ -7,8 +7,8 @@ use App\Http\Resources\Center\CenterCollection;
 use App\Http\Resources\Center\Center as CenterResource;
 use App\Models\Center;
 use App\Models\Center\Infrastructure;
+use App\Models\Disaster\Disaster;
 use App\Models\Location\Barangay;
-use App\Models\Location\City;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
@@ -21,8 +21,9 @@ class Listing extends Controller
         $lgu = Auth::guard('lgu')->user();
         $barangays = Barangay::where(['city_code' => $lgu->getCityId()])->get();
         $infrastructures = Infrastructure::all();
+        $disasters = Disaster::all();
 
-        return \view('center.listing', \compact('barangays', 'infrastructures', 'lgu'));
+        return \view('center.listing', \compact('barangays', 'infrastructures', 'lgu', 'disasters'));
     }
 
     public function getAllAsResourceCollection()

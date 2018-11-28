@@ -19,9 +19,10 @@ class DisasterTypeTableSeeder extends Seeder
     private function structures() : array
     {
         return [
-            ['name' => "Fire"],
             ['name' => "Earthquake"],
+            ['name' => "Fire"],
             ['name' => "Landslide"],
+            ['name' => "Typhoon"],
         ];
     }
 }
