@@ -2,19 +2,25 @@
 
 namespace Modules\Lgu\Http\Controllers\Disaster;
 
+use App\Http\Resources\Disaster\Disaster as DisasterResource;
+use App\Http\Resources\Disaster\DisasterCollection;
+use App\Models\Disaster\Disaster;
 use App\Models\Disaster\DisasterType;
-use App\Models\Location\Barangay;
-use App\Models\Location\City;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\View;
+use Yajra\DataTables\DataTables;
 
 class Listing extends Controller
 {
     public function __invoke() : View
     {
-        $cities = City::all();
-        $barangays = Barangay::all();
         $types = DisasterType::all();
-        return \view('disaster.listing', compact("cities", "barangays", "types"));
+        return \view('disaster.listing', compact("types"));
+    }
+
+    public function getAllAsResourceCollection()
+    {
+        return DataTables::of(Collection::make(new DisasterCollection(new DisasterResource(Disaster::all()))))->make();
     }
 }
