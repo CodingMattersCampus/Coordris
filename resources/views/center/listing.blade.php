@@ -22,6 +22,14 @@
                 <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Sendong Survivors Center">
             </div>
             <div class="form-group">
+                <label for="#disaster">Select Disaster:</label>
+                <select id="disaster" name="disaster_id" class="form-control">
+                    @foreach($disasters as $disaster)
+                        <option class="form-control" value="{{$disaster->id}}"> {{$disaster->name}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="#barangay">Select Baranagay:</label>
                 <select id="barangay" name="barangay_id" class="form-control">
                     @foreach($barangays as $barangay)

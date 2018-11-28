@@ -20,6 +20,7 @@ class CreateCentersTable extends Migration
             $table->integer('infrastructure_id');
             $table->integer('barangay_id');
             $table->integer('city_id');
+            $table->integer('disaster_id');
             $table->timestamps();
         });
     }
