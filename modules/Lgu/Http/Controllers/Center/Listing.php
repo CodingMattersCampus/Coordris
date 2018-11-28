@@ -19,11 +19,10 @@ class Listing extends Controller
     public function __invoke() : View
     {
         $lgu = Auth::guard('lgu')->user();
-        $cities = City::all();
-        $barangays = Barangay::all();
+        $barangays = Barangay::where(['city_code' => $lgu->getCityId()])->get();
         $infrastructures = Infrastructure::all();
 
-        return \view('center.listing', \compact('cities', 'barangays', 'infrastructures', 'lgu'));
+        return \view('center.listing', \compact('barangays', 'infrastructures', 'lgu'));
     }
 
     public function getAllAsResourceCollection()
