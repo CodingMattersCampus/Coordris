@@ -18,8 +18,6 @@ class CreateDisastersTable extends Migration
             $table->string('name');
             $table->date('disaster_date');
             $table->integer('type_id');
-            $table->integer('city_id');
-            $table->integer('barangay_id');
             $table->timestamps();
         });
     }

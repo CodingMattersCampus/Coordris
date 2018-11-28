@@ -45,6 +45,7 @@ Route::group(['middleware' => 'auth:lgu'], function() {
     });
 
     Route::group(['prefix' => 'disasters', 'namespace' => "Disaster"], function(){
+        Route::post('register', "Register")->name('disasters.registration');
         Route::get('listing', "Listing")->name('disasters.listing');
     });
 });
