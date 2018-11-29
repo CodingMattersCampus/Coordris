@@ -10,3 +10,5 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('{ngo}/product/listing', 'Warehouse\InventoryController@getAllAsResourceCollection')->name('api.ngo.products.listing');

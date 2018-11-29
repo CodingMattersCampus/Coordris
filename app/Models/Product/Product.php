@@ -22,4 +22,9 @@ class Product extends Model
     {
         return (Category::find($this->category_id))->name;
     }
+
+    public static function getIdByName(string $name)
+    {
+        return self::whereName($name)->first()->id;
+    }
 }
