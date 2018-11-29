@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DisasterTypeTableSeeder::class);
         $this->call(UsersTableSeeder::class);
         $this->call(VolunteerTableSeeder::class);
+        $this->call(NgoInventorySeeder::class);
     }
 }
