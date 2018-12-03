@@ -24,7 +24,8 @@ class CategoryTableSeeder extends Seeder
         return [
             ['name' => "Canned"],
             ['name' => "Water"],
-            ['name' => "Milk"],
+            ['name' => "Milk/Coffee"],
+            ['name' => "Soup"],
         ];
     }
 }
