@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Models\Product;
+namespace App\Models\Product\Category;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class TopLevelCategory extends Model
 {
-    protected $guarded = [];
-
+	protected $guarded =  [];
     public static function getIdByName(string $name)
     {
     	return self::whereName($name)->first()->id;

@@ -14,13 +14,13 @@ class NgoInventorySeeder extends Seeder
      */
     public function run()
     {
-        foreach ($this->products() as $item) {
-            if(!Inventory::where([
-            	'product_id' => $item['product_id'],
-            	'volunteer_id' => $item['volunteer_id']
-            	])->first())
-                Inventory::create($item);
-        }
+        // foreach ($this->products() as $item) {
+        //     if(!Inventory::where([
+        //     	'product_id' => $item['product_id'],
+        //     	'volunteer_id' => $item['volunteer_id']
+        //     	])->first())
+        //         Inventory::create($item);
+        // }
     }
 
     private function products()

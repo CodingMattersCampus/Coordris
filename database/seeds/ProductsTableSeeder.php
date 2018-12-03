@@ -19,10 +19,10 @@ class ProductsTableSeeder extends Seeder
         $this->call(BrandTableSeeder::class);
         $this->call(CategoryTableSeeder::class);
 
-        foreach ($this->items() as $item) {
-            if(!Product::whereName($item['name'])->first())
-                Product::create($item);
-        }
+        // foreach ($this->items() as $item) {
+        //     if(!Product::whereName($item['name'])->first())
+        //         Product::create($item);
+        // }
     }
 
     private function items()
