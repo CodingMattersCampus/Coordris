@@ -23,10 +23,20 @@ class BrandTableSeeder extends Seeder
     {
         return [
             ['name' => "Argentina"],
+            ['name' => "Purefoods"],
+            ['name' => "Holiday"],
+            ['name' => "Quickchow"],
+            ['name' => "Lucky Me"],
+            ['name' => "Maggi"],
+            ['name' => "Nissin"],
             ['name' => "Bear Brand"],
+            ['name' => "Nescafe"],
+            ['name' => "Blend 45"],
+            ['name' => "Great Taste"],
             ['name' => "Nature's Spring"],
             ['name' => "Nido"],
             ['name' => "Pampers"],
+            ['name' => "E.Q."],
         ];
     }
 }
