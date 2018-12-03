@@ -31,7 +31,27 @@ class ProductsTableSeeder extends Seeder
             [
                 "name" => "paborito",
                 "brand_id" => Brand::getIdByName("Nido"),
-                "category_id" => Category::getIdByName("Milk"),
+                "category_id" => Category::getIdByName("Milk/Coffee"),
+            ],
+            [
+                "name" => "wave 1",
+                "brand_id" => Brand::getIdByName("Maggi"),
+                "category_id" => Category::getIdByName("Soup"),
+            ],
+            [
+                "name" => "primary",
+                "brand_id" => Brand::getIdByName("Nature's Spring"),
+                "category_id" => Category::getIdByName("Water"),
+            ],
+            [
+                "name" => "partial",
+                "brand_id" => Brand::getIdByName("Argentina"),
+                "category_id" => Category::getIdByName("Canned"),
+            ],
+            [
+                "name" => "partial_2.0",
+                "brand_id" => Brand::getIdByName("Nescafe"),
+                "category_id" => Category::getIdByName("Milk/Coffee"),
             ]
         ];
     }
