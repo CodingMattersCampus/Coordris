@@ -23,6 +23,9 @@ class DisasterTypeTableSeeder extends Seeder
             ['name' => "Fire"],
             ['name' => "Landslide"],
             ['name' => "Typhoon"],
+            ['name' => "Volcanic Eruption"],
+            ['name' => "Tsunami"],
+            ['name' => "Warfare"],
         ];
     }
 }
