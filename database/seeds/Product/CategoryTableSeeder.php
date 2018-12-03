@@ -3,7 +3,9 @@
 namespace TableSeeder\Product;
 
 use Illuminate\Database\Seeder;
-use App\Models\Product\Category;
+use TableSeeder\Product\Category\TopLevelCategoryTableSeeder;
+use TableSeeder\Product\Category\MainCategoryTableSeeder;
+use TableSeeder\Product\Category\SubcategoryTableSeeder;
 
 class CategoryTableSeeder extends Seeder
 {
@@ -14,18 +16,8 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach ($this->categories() as $category)
-            if(! Category::whereName($category['name'])->first())
-                Category::create($category);
-    }
-
-    public function categories()
-    {
-        return [
-            ['name' => "Canned"],
-            ['name' => "Water"],
-            ['name' => "Milk/Coffee"],
-            ['name' => "Soup"],
-        ];
+        $this->call(TopLevelCategoryTableSeeder::class);
+        $this->call(MainCategoryTableSeeder::class);
+        $this->call(SubcategoryTableSeeder::class);
     }
 }
