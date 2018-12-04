@@ -136,11 +136,11 @@ class LguServiceProvider extends ServiceProvider
                     'url' => \route('products.listing'),
                     'icon' => 'database',
                 ]);
-                $event->menu->add([
-                    'text' => 'Category',
-                    'url' => \route('product.categories.listing'),
-                    'icon' => 'list',
-                ]);
+//                $event->menu->add([
+//                    'text' => 'Category',
+//                    'url' => \route('product.categories.listing'),
+//                    'icon' => 'list',
+//                ]);
                 $event->menu->add([
                     'text' => 'Brands',
                     'url' => \route('product.brands.listing'),
