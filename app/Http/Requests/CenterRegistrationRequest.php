@@ -25,9 +25,11 @@ class CenterRegistrationRequest extends FormRequest
     {
         return [
             'name'  => "required|string",
-            // 'city_id' => "required|integer",
+            'support_duration' => "required|integer",
             'barangay_id' => "required|integer",
             'infrastructure_id' => "required|integer",
+            'has_electricity_supply' => "required",
+            'has_water_supply' => "required",
         ];
     }
 }
