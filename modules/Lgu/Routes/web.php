@@ -22,10 +22,8 @@ Route::group(['middleware' => 'auth:lgu'], function() {
     Route::post('logout', "User\Authentication\Logout")->name('lgu.logout');
 
     Route::get('/', function () {
-        return redirect(\route('lgu.home'));
-    });
-
-    Route::view('/maps', "lgu::home")->name('lgu.home');
+        return redirect(\route('center.listing'));
+    })->name('lgu.home');
 
     Route::group(['prefix' => 'centers', "namespace" => "Center"], function () {
         Route::get('listing', "Listing")->name('center.listing');
