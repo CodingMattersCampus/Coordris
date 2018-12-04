@@ -15,6 +15,7 @@ class CreateCentersTable extends Migration
     {
         Schema::create('centers', function (Blueprint $table) {
             $table->increments('id');
+            $table->uuid('code')->unique();
             $table->string('name');
             $table->string('slug');
             $table->integer('infrastructure_id');
