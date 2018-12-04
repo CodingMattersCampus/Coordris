@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Product\Product as ProductResource;
 use App\Http\Resources\Product\ProductCollection;
 use App\Models\Product\Brand;
-use App\Models\Product\Category;
+use App\Models\Product\Category\MainCategory;
+use App\Models\Product\Category\Subcategory;
 use App\Models\Product\Product;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\View;
@@ -16,10 +17,11 @@ class Listing extends Controller
 {
     public function __invoke() : View
     {
-        $categories = Category::all();
+        $categories = MainCategory::all();
+        $subcategories = Subcategory::all();
         $brands = Brand::all();
 
-        return \view('lgu::product.listing', \compact('brands', 'categories'));
+        return \view('lgu::product.listing', \compact('brands', 'categories', 'subcategories'));
     }
 
     public function getAllAsResourceCollection()
