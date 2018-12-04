@@ -24,7 +24,14 @@ class MainCategoryTableSeeder extends Seeder
     {
         return [
             ['name' => "Water", 'top_level_category_id' => TopLevelCategory::getIdByName("Food")],
-            ['name' => "Blanket", 'top_level_category_id' => TopLevelCategory::getIdByName("Non-Food")],
+			['name' => "Canned Goods", 'top_level_category_id' => TopLevelCategory::getIdByName("Food")],
+			['name' => "Medicines", 'top_level_category_id' => TopLevelCategory::getIdByName("Food")],
+			['name' => "Rice", 'top_level_category_id' => TopLevelCategory::getIdByName("Food")],
+			['name' => "Instant Packaged Goods", 'top_level_category_id' => TopLevelCategory::getIdByName("Food")],
+            ['name' => "Personal Hygiene", 'top_level_category_id' => TopLevelCategory::getIdByName("Non-Food")],
+            ['name' => "Medical Supplies", 'top_level_category_id' => TopLevelCategory::getIdByName("Non-Food")],
+            ['name' => "Clothing", 'top_level_category_id' => TopLevelCategory::getIdByName("Non-Food")],
+            ['name' => "Hand Tools", 'top_level_category_id' => TopLevelCategory::getIdByName("Non-Food")],
         ];
     }
 }
