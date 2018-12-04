@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->integer('brand_id');
             $table->integer('category_id');
+            $table->integer('subcategory_id');
             $table->timestamps();
         });
     }
