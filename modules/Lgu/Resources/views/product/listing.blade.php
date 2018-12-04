@@ -38,6 +38,14 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="#category">Subategory:</label>
+                <select class="form-control" name="subcategory_id" id="category">
+                    @foreach($subcategories as $category)
+                        <option value="{{ $category->id }}"> {{ $category->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-lg btn-block btn-primary">Register</button>
             </div>
         </form>

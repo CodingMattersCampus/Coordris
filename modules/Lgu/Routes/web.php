@@ -22,10 +22,8 @@ Route::group(['middleware' => 'auth:lgu'], function() {
     Route::post('logout', "User\Authentication\Logout")->name('lgu.logout');
 
     Route::get('/', function () {
-        return redirect(\route('lgu.home'));
-    });
-
-    Route::view('/maps', "lgu::home")->name('lgu.home');
+        return redirect(\route('center.listing'));
+    })->name('lgu.home');
 
     Route::group(['prefix' => 'centers', "namespace" => "Center"], function () {
         Route::get('listing', "Listing")->name('center.listing');
@@ -38,10 +36,10 @@ Route::group(['middleware' => 'auth:lgu'], function() {
         Route::post('registration', "Registration")->name('products.registration');
 
         Route::post('categories', "Category\Registration")->name('product.category.registration');
-        Route::view('categories', 'product.category.listing')->name('product.categories.listing');
+        Route::view('categories', 'lgu::product.category.listing')->name('product.categories.listing');
 
         Route::post('brands', "Brand\Registration")->name('product.brand.registration');
-        Route::view('brands', 'product.brand.listing')->name('product.brands.listing');
+        Route::view('brands', 'lgu::product.brand.listing')->name('product.brands.listing');
     });
 
     Route::group(['prefix' => 'disasters', 'namespace' => "Disaster"], function(){

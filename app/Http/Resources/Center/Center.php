@@ -21,6 +21,9 @@ class Center extends JsonResource
             'city'      => $this->cityLocation(),
             'barangay'  => $this->barangayLocation(),
             'support'   => $this->supportFor(),
+            'duration'  => $this->support_duration . " Day(s)",
+            'water'     => ($this->has_water_supply == true) ? "Available" : "Not Available",
+            'electricity'     => ($this->has_electricity_supply == true) ? "Available" : "Not Available",
         ];
     }
 }

@@ -4,26 +4,26 @@
     <h1>Dashboard</h1>
 @stop
 @section('content')
-<div class="row" id="app">
-    <div class="col-md-4"></div>
-    <div class="col-md-8">
-        <div class="box box-primary">
-            <div class="box-header">
-                <h4 class="box-title text-capitalize">Center Summary</h4>
-            </div>
-            <div class="box-body">
-                <table id="centers-table" class="table table-responsive table-striped table-hover">
-                    <thead class="bg-blue-gradient">
-                    <tr>
-                        <th>Name</th>
-                        <th>Infrastructure</th>
-                        <th>Barangay</th>
-                        <th>City</th>
-                        <th>Disaster Support</th>
-                    </tr>
-                    </thead>
-                </table>
-            </div>
+<div class="row-fluid" id="app">
+    <div class="box box-primary">
+        <div class="box-header">
+            <h4 class="box-title text-capitalize">Center Summary</h4>
+        </div>
+        <div class="box-body">
+            <table id="centers-table" class="table table-responsive table-striped table-hover">
+                <thead class="bg-blue-gradient">
+                <tr>
+                    <th>Name</th>
+                    <th>Infrastructure</th>
+                    <th>Barangay</th>
+                    <th>City</th>
+                    <th>Disaster Support</th>
+                    <th>Support Duration</th>
+                    <th>Electricity Supply</th>
+                    <th>Water Supply</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </div>
 </div>
@@ -41,10 +41,8 @@
         $(function() {
             var table = $('#centers-table').DataTable({
                 "dom": 'Bfrtip',
-                "buttons": [
-                    'pageLength', 'pdf', 'csv'
-                ],
-                "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+                "buttons": ['pageLength'],
+                "lengthMenu": [[50, 100, 500, -1], [50, 100, 500, "All"]],
                 "serverSide": true,
                 "deferRender": true,
                 "columns": [
@@ -53,6 +51,9 @@
                     { "data": "barangay", "orderable": false, "searchable": true},
                     { "data": "city", "orderable": false, "searchable": true },
                     { "data": "support", "orderable": false, "searchable": true },
+                    { "data": "duration", "orderable": false, "searchable": false },
+                    { "data": "electricity", "orderable": false, "searchable": false },
+                    { "data": "water", "orderable": false, "searchable": false },
                 ],
                 "ajax": "{{\route('api.centers.listing')}}"
             });

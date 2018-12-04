@@ -20,7 +20,11 @@ Route::group(['middleware' => 'auth:ngo'], function() {
 
     Route::post('logout', "User\Authentication\Logout")->name('ngo.logout');
 
-    Route::view('/', 'ngo::center.map')->name('ngo.centers.map');
+    Route::get('/', function () {
+        return redirect()->route('ngo.centers.map');
+    })->name('ngo.home');
+
+    Route::view('centers', 'ngo::center.map')->name('ngo.centers.map');
 
     Route::get('/product/listing', 'Warehouse\InventoryController')->name('ngo.product.listing');
 });
