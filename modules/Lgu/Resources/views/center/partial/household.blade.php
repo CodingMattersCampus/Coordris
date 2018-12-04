@@ -1,6 +1,16 @@
 <div class="row">
     <div class="col-md-3">
-        <form>
+        <form method = "POST" action = "{{route('household.register', compact('center'))}}">
+            @csrf
+            @if ($errors->any())
+                <div class="alert alert-danger text-xs">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li class="text-sm">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="form-group">
                 <label for="head">Head of the Family:</label>
                 <input class="form-control" type="text" name="head" id="head" placeholder="Name"/>
@@ -16,19 +26,19 @@
                     <input class="form-control" type="text" name="child" id="child" placeholder="Name"/>
                 </div>
                 <div class="form-group">
-                    <label for="child">Name of Second Child:</label>
-                    <input class="form-control" type="text" name="child" id="child" placeholder="Name"/>
+                    <label for="child2">Name of Second Child:</label>
+                    <input class="form-control" type="text" name="child2" id="child2" placeholder="Name"/>
                 </div>
             </fieldset>
             <fieldset>
                 <legend class="text-center">Extended Members</legend>
                 <div class="form-group">
                     <label for="dependent1">Name of Depedendent:</label>
-                    <input class="form-control" type="text" name="child" id="dependent1" placeholder="Name"/>
+                    <input class="form-control" type="text" name="dependent1" id="dependent1" placeholder="Name"/>
                 </div>
                 <div class="form-group">
                     <label for="dependent2">Name of Dependent:</label>
-                    <input class="form-control" type="text" name="child" id="dependent2" placeholder="Name"/>
+                    <input class="form-control" type="text" name="dependent2" id="dependent2" placeholder="Name"/>
                 </div>
             </fieldset>
             <div class="form-group">
