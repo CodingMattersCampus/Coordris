@@ -23,7 +23,7 @@ class Listing extends Controller
         $infrastructures = Infrastructure::all();
         $disasters = Disaster::all();
 
-        return \view('center.listing', \compact('barangays', 'infrastructures', 'lgu', 'disasters'));
+        return \view('lgu::center.listing', \compact('barangays', 'infrastructures', 'lgu', 'disasters'));
     }
 
     public function getAllAsResourceCollection()

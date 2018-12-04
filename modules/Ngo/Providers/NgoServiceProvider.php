@@ -127,9 +127,9 @@ class NgoServiceProvider extends ServiceProvider
                 ]);
                 $event->menu->add('WAREHOUSE SETTINGS');
                 $event->menu->add([
-                    'text' => 'Inventory',
-                    'url' => "#",
-                    'icon' => 'database',
+                    'text' => 'Inventory Summary',
+                    'url' => \route('ngo.product.listing'),
+                    'icon' => 'archive',
                 ]);$event->menu->add([
                     'text' => 'Dispatch Report',
                     'url' => "#",

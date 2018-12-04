@@ -45,6 +45,30 @@
                     @endforeach
                 </select>
             </div>
+            <div class="form-group">
+                <label for="#duration">Support Duration (in Days):</label>
+                <select id="duration" name="support_duration" class="form-control">
+                    <option class="form-control" value="1"> 1 Day</option>
+                    <option class="form-control" value="2"> 2 Days</option>
+                    <option class="form-control" value="3" selected> 3 Days</option>
+                    <option class="form-control" value="4"> 4 Days</option>
+                    <option class="form-control" value="5"> 5 Days</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="#electricity">Has Electricity Supply:</label>
+                <select id="electricity" name="has_electricity_supply" class="form-control">
+                    <option class="form-control" value="1"> Yes </option>
+                    <option class="form-control" value="0"> No </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="#water-supply">Has Water Supply:</label>
+                <select id="water-supply" name="has_water_supply" class="form-control">
+                    <option class="form-control" value="1"> Yes </option>
+                    <option class="form-control" value="0"> No </option>
+                </select>
+            </div>
             <div class="form-goup">
                 <button class="btn btn-block btn-primary">Register</button>
             </div>
@@ -64,6 +88,9 @@
                         <th>Barangay</th>
                         <th>City</th>
                         <th>Disaster Support</th>
+                        <th>Support Duration</th>
+                        <th>Electricity Supply</th>
+                        <th>Water Supply</th>
                     </tr>
                     </thead>
                 </table>
@@ -85,10 +112,8 @@
     $(function() {
         var table = $('#centers-table').DataTable({
             "dom": 'Bfrtip',
-            "buttons": [
-                'pageLength', 'pdf', 'csv'
-            ],
-            "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            "buttons": ['pageLength'],
+            "lengthMenu": [[50, 100, 250, -1], [50, 100, 250, "All"]],
             "serverSide": true,
             "deferRender": true,
             "columns": [
@@ -97,6 +122,9 @@
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },
                 { "data": "support", "orderable": false, "searchable": true },
+                { "data": "duration", "orderable": false, "searchable": false },
+                { "data": "electricity", "orderable": false, "searchable": false },
+                { "data": "water", "orderable": false, "searchable": false },
             ],
             "ajax": "{{\route('api.lgu.centers.listing', \compact('lgu'))}}"
         });

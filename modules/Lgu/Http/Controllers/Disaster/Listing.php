@@ -16,7 +16,7 @@ class Listing extends Controller
     public function __invoke() : View
     {
         $types = DisasterType::all();
-        return \view('disaster.listing', compact("types"));
+        return \view('lgu::disaster.listing', compact("types"));
     }
 
     public function getAllAsResourceCollection()

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models\Product;
+namespace App\Models\Forum;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Channel extends Model
 {
     protected $guarded = [];
 }

@@ -121,11 +121,6 @@ class LguServiceProvider extends ServiceProvider
             if (Auth::guard('lgu')->check()) {
                 $event->menu->add('GENERAL SETTINGS');
                 $event->menu->add([
-                    'text' => 'Updates',
-                    'url' => \route('lgu.home'),
-                    'icon' => 'dashboard',
-                ]);
-                $event->menu->add([
                     'text' => 'Evacuation Centers',
                     'url' => \route('center.listing'),
                     'icon' => 'home',
@@ -141,11 +136,11 @@ class LguServiceProvider extends ServiceProvider
                     'url' => \route('products.listing'),
                     'icon' => 'database',
                 ]);
-                $event->menu->add([
-                    'text' => 'Category',
-                    'url' => \route('product.categories.listing'),
-                    'icon' => 'list',
-                ]);
+//                $event->menu->add([
+//                    'text' => 'Category',
+//                    'url' => \route('product.categories.listing'),
+//                    'icon' => 'list',
+//                ]);
                 $event->menu->add([
                     'text' => 'Brands',
                     'url' => \route('product.brands.listing'),

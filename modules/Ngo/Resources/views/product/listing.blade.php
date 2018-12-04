@@ -6,41 +6,6 @@
 @section('content')
 <div id="app" class="row">
     <div class="col-md-3">
-        <form action="{{route('products.registration')}}" method="POST">
-            @csrf
-            @if ($errors->any())
-                <div class="alert alert-danger text-xs">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li class="text-sm">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-            <div class="form-group">
-                <label for="#centerName">Name:</label>
-                <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Drinks">
-            </div>
-            <div class="form-group">
-                <label for="#brand">Brand:</label>
-                <select class="form-control" name="brand_id" id="brand">
-                    @foreach($brands as $brand)
-                        <option value="{{ $brand->id }}"> {{ $brand->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="#category">Category:</label>
-                <select class="form-control" name="category_id" id="category">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}"> {{ $category->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-lg btn-block btn-primary">Register</button>
-            </div>
-        </form>
     </div>
     <div class="col-md-9">
         <div class="box box-primary">
@@ -86,7 +51,7 @@
                 { "data": "brand", "orderable": false, "searchable": true },
                 { "data": "category", "orderable": false, "searchable": true},
             ],
-            "ajax": "{{\route('api.products.listing')}}"
+            "ajax": "{{\route('api.ngo.products.listing', compact('user'))}}"
         });
     });
 </script>

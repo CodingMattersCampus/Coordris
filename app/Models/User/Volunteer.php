@@ -9,4 +9,9 @@ class Volunteer extends Authenticatable
     protected $guarded = [];
 
     protected $hidden = ['password', 'remember_token'];
+
+    public static function getIdByName(string $name)
+    {
+    	return self::whereName($name)->first()->id;
+    }
 }

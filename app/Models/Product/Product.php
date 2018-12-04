@@ -2,6 +2,7 @@
 
 namespace App\Models\Product;
 
+use App\Models\Product\Category\MainCategory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -20,6 +21,11 @@ class Product extends Model
 
     public function categoryName() : string
     {
-        return (Category::find($this->category_id))->name;
+        return (MainCategory::find($this->category_id))->name;
+    }
+
+    public static function getIdByName(string $name)
+    {
+        return self::whereName($name)->first()->id;
     }
 }
