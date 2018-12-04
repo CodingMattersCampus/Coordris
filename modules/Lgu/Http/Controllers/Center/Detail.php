@@ -10,6 +10,6 @@ class Detail extends Controller
 {
     public function __invoke(Center $center) : View
     {
-        return \view('center.detail', compact('center'));
+        return \view('lgu::center.detail', compact('center'));
     }
 }

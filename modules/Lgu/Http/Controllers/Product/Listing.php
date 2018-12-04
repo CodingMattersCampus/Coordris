@@ -19,7 +19,7 @@ class Listing extends Controller
         $categories = Category::all();
         $brands = Brand::all();
 
-        return \view('product.listing', \compact('brands', 'categories'));
+        return \view('lgu::product.listing', \compact('brands', 'categories'));
     }
 
     public function getAllAsResourceCollection()
