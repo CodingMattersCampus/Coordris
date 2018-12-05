@@ -18,6 +18,7 @@ class Inventory extends Resource
             'name'      => $this->product()->name,
             'brand'     => $this->product()->brandName(),
             'category'  => $this->product()->categoryName(),
+            'subcategory' => $this->product()->subcategoryName(),
             'stocks'    => $this->quantity,
         ];
     }

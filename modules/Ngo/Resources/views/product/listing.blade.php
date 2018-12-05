@@ -16,6 +16,7 @@
                     <th>Name</th>
                     <th>Brand</th>
                     <th>Category</th>
+                    <th>Subcategory</th>
                     <th>Stocks</th>
                 </tr>
                 </thead>
@@ -45,6 +46,7 @@
                 { "data": "name", "orderable": false, "searchable": true },
                 { "data": "brand", "orderable": false, "searchable": true },
                 { "data": "category", "orderable": false, "searchable": true},
+                { "data": "subcategory", "orderable": false, "searchable": true},
                 { "data": "stocks", "orderable": false, "searchable": false},
             ],
             "ajax": "{{\route('api.ngo.products.listing', compact('user'))}}"
