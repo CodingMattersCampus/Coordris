@@ -15,9 +15,11 @@ class ProductSearch extends Resource
     public function toArray($request)
     {
         return [
-            'name' => $this->name,
-            'brand' => $this->brandName(),
-            'category' => $this->categoryName(),
+            'id'        => $this->id,
+            'sku'       => $this->sku,
+            'name'      => $this->name,
+            'brand'     => $this->brandName(),
+            'category'  => $this->categoryName(),
         ];
     }
 }

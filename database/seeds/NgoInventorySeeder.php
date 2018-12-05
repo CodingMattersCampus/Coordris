@@ -14,13 +14,13 @@ class NgoInventorySeeder extends Seeder
      */
     public function run()
     {
-        // foreach ($this->products() as $item) {
-        //     if(!Inventory::where([
-        //     	'product_id' => $item['product_id'],
-        //     	'volunteer_id' => $item['volunteer_id']
-        //     	])->first())
-        //         Inventory::create($item);
-        // }
+        foreach ($this->products() as $item) {
+            if(!Inventory::where([
+            	'product_id' => $item['product_id'],
+            	'volunteer_id' => $item['volunteer_id']
+            	])->first())
+                Inventory::create($item);
+        }
     }
 
     private function products()
@@ -29,8 +29,28 @@ class NgoInventorySeeder extends Seeder
     		[
     			"product_id" => Product::getIdByName("paborito"),
     			"volunteer_id" => Volunteer::getIdByName("volunteer"),
-    			"quantity" => 143,
-    		]
+    			"quantity" => 250,
+    		],
+            [
+                "product_id" => Product::getIdByName("wave 1"),
+                "volunteer_id" => Volunteer::getIdByName("volunteer"),
+                "quantity" => 100,
+            ],
+            [
+                "product_id" => Product::getIdByName("primary"),
+                "volunteer_id" => Volunteer::getIdByName("volunteer"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial"),
+                "volunteer_id" => Volunteer::getIdByName("volunteer"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial_2.0"),
+                "volunteer_id" => Volunteer::getIdByName("volunteer"),
+                "quantity" => 450,
+            ],
     	];
     }
 }

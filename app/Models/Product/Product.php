@@ -3,6 +3,7 @@
 namespace App\Models\Product;
 
 use App\Models\Product\Category\MainCategory;
+use App\Models\Product\Category\Subcategory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -27,6 +28,11 @@ class Product extends Model
     public function categoryName() : string
     {
         return (MainCategory::find($this->category_id))->name;
+    }
+
+    public function subcategoryName() : string
+    {
+        return (Subcategory::find($this->subcategory_id))->name;
     }
 
     public static function getIdByName(string $name)

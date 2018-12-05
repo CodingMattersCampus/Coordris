@@ -65,7 +65,7 @@
 
             setInterval(function() {
                 centersTable.ajax.reload();
-            }, 10000);
+            }, 5000);
         });
 
     </script>
