@@ -31,15 +31,13 @@
 @push('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="{{asset('vendor/DataTables/datatables.min.css')}}"/>
-    <link rel="stylesheet" type="text/css" href="{{asset('vendor/mdb/css/mdb.min.css')}}"/>
 @endpush
 @push('js')
     <script type="text/javascript" src="{{\asset('js/app.js')}}"></script>
     <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('vendor/mdb/js/mdb.min.js')}}"></script>
     <script>
         $(function() {
-            var table = $('#centers-table').DataTable({
+            const centersTable = $('#centers-table').DataTable({
                 "dom": 'Bfrtip',
                 "buttons": ['pageLength'],
                 "lengthMenu": [[50, 100, 500, -1], [50, 100, 500, "All"]],
@@ -59,9 +57,13 @@
             });
             //click rows
             $('#centers-table tbody').on('click', 'tr', function () {
-                var data = table.row( this ).data();
+                const data = centersTable.row( this ).data();
                 window.location.href = ""+ data['slug'] +"/detail";
             });
+
+            setInterval(function() {
+                centersTable.ajax.reload();
+            }, 10000);
         });
     </script>
 @endpush
