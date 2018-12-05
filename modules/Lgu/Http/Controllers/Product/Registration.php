@@ -13,6 +13,7 @@ class Registration extends Controller
     {
         $data = $request->post();
         unset($data['_token']);
+        $data['sku'] = md5($data['name'].$data['brand_id'].$data['category_id'].$data['subcategory_id']);
 
         Product::firstOrCreate($data);
 

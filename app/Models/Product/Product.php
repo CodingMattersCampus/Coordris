@@ -9,6 +9,11 @@ class Product extends Model
 {
     protected $guarded = [];
 
+    public function sku() : string
+    {
+        return $this->sku;
+    }
+
     public function productName() : string
     {
         return $this->name;
