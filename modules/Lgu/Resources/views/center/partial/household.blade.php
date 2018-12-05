@@ -46,5 +46,36 @@
             </div>
         </form>
     </div>
-    <div class="col-md-9"></div>
+    <div class="col-md-9">
+        <table id="household-table" class="table table-responsive table-striped table-hover">
+            <thead class="bg-blue-gradient">
+            <tr>
+                <th>Head of Family</th>
+                <th>Spouse</th>
+                <th>Members</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
 </div>
+@push('js')
+<script type="text/javascript">
+    $(function() {
+        const householdTable = $('#household-table').DataTable({
+            "dom": 'Bfrtip',
+            "buttons": [
+                'pageLength', 'pdf', 'csv'
+            ],
+            "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            "serverSide": true,
+            "deferRender": true,
+            "columns": [
+                { "data": "head", "orderable": false, "searchable": true },
+                { "data": "spouse", "orderable": false, "searchable": true },
+                { "data": "total_members", "orderable": false, "searchable": true},
+            ],
+            "ajax": "{{\route('api.center.household.listing', compact('center'))}}"
+        });
+    });
+</script>
+@endpush

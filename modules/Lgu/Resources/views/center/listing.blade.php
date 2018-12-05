@@ -84,6 +84,7 @@
                     <thead class="bg-blue-gradient">
                     <tr>
                         <th>Name</th>
+                        <th>Population</th>
                         <th>Infrastructure</th>
                         <th>Barangay</th>
                         <th>City</th>
@@ -116,6 +117,7 @@
             "deferRender": true,
             "columns": [
                 { "data": "name", "orderable": false, "searchable": true },
+                { "data": "population", "orderable": false, "searchable": false },
                 { "data": "structure", "orderable": false, "searchable": true },
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },

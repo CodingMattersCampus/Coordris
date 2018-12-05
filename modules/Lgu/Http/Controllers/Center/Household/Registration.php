@@ -36,7 +36,11 @@ class Registration extends Controller
             'head' => $data['head'],
             'spouse' => $data['spouse'] ?? "",
             'total_members' => $total,
+            'center_code'   => $center->code,
         ]);
+
+        $center->population += $total;
+        $center->save();
 
         return redirect()->route('center.detail', compact('center'));
     }

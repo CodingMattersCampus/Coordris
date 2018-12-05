@@ -16,3 +16,10 @@ Route::group(['namespace' => "Search", 'prefix' => 'search'], function () {
         Route::get("/", "AllProducts")->name('api.search.products.all');
     });
 });
+
+Route::group(['namespace' => "Center", 'prefix' => 'centers'], function () {
+
+    Route::group(['namespace' => "Household", 'prefix' => 'household'], function() {
+        Route::get('{center}/household/listing', "Listing")->name('api.center.household.listing');
+    });
+});

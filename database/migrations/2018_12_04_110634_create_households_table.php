@@ -19,6 +19,7 @@ class CreateHouseholdsTable extends Migration
             $table->string('head');
             $table->string('spouse')->nullable();
             $table->integer('total_members')->default(1);
+            $table->uuid('center_code');
             $table->timestamps();
         });
     }
