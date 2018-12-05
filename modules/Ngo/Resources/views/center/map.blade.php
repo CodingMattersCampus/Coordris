@@ -60,7 +60,7 @@
             //click rows
             $('#centers-table tbody').on('click', 'tr', function () {
                 const data = centersTable.row( this ).data();
-                window.location.href = ""+ data['slug'] +"/detail";
+                window.location.href = "/centers/"+ data['slug'] +"/detail";
             });
 
             setInterval(function() {
