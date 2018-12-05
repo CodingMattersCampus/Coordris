@@ -34,5 +34,32 @@ class HouseholdBasicItemsSeeder extends Seeder
             'unit'  => 'pcs',
             'quantity'  => 6,
         ]);
+
+        \App\Models\Product\BasicNeededItem::firstOrCreate([
+            'hh_support_code' => $support->hh_support_code,
+            'top_level_category_id' => \App\Models\Product\Category\TopLevelCategory::getIdByName('Non-Food'),
+            'main_category_id' => \App\Models\Product\Category\MainCategory::getIdByName("Clothing"),
+            'subcategory_id' => \App\Models\Product\Category\Subcategory::getIdByName("Children"),
+            'unit'  => 'pcs',
+            'quantity'  => 2,
+        ]);
+
+        \App\Models\Product\BasicNeededItem::firstOrCreate([
+            'hh_support_code' => $support->hh_support_code,
+            'top_level_category_id' => \App\Models\Product\Category\TopLevelCategory::getIdByName('Non-Food'),
+            'main_category_id' => \App\Models\Product\Category\MainCategory::getIdByName("Clothing"),
+            'subcategory_id' => \App\Models\Product\Category\Subcategory::getIdByName("Male"),
+            'unit'  => 'pcs',
+            'quantity'  => 2,
+        ]);
+
+        \App\Models\Product\BasicNeededItem::firstOrCreate([
+            'hh_support_code' => $support->hh_support_code,
+            'top_level_category_id' => \App\Models\Product\Category\TopLevelCategory::getIdByName('Non-Food'),
+            'main_category_id' => \App\Models\Product\Category\MainCategory::getIdByName("Clothing"),
+            'subcategory_id' => \App\Models\Product\Category\Subcategory::getIdByName("Female"),
+            'unit'  => 'pcs',
+            'quantity'  => 2,
+        ]);
     }
 }
