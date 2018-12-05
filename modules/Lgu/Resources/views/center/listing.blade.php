@@ -84,6 +84,7 @@
                     <thead class="bg-blue-gradient">
                     <tr>
                         <th>Name</th>
+                        <th>Population</th>
                         <th>Infrastructure</th>
                         <th>Barangay</th>
                         <th>City</th>
@@ -102,12 +103,10 @@
 @push('css')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" type="text/css" href="{{asset('vendor/DataTables/datatables.min.css')}}"/>
-<link rel="stylesheet" type="text/css" href="{{asset('vendor/mdb/css/mdb.min.css')}}"/>
 @endpush
 @push('js')
 <script type="text/javascript" src="{{\asset('js/app.js')}}"></script>
 <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('vendor/mdb/js/mdb.min.js')}}"></script>
 <script>
     $(function() {
         var table = $('#centers-table').DataTable({
@@ -118,6 +117,7 @@
             "deferRender": true,
             "columns": [
                 { "data": "name", "orderable": false, "searchable": true },
+                { "data": "population", "orderable": false, "searchable": false },
                 { "data": "structure", "orderable": false, "searchable": true },
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },

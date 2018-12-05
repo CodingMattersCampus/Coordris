@@ -25,6 +25,7 @@ class CreateCentersTable extends Migration
             $table->integer('support_duration')->default(3);
             $table->boolean('has_water_supply')->default(false);
             $table->boolean('has_electricity_supply')->default(false);
+            $table->integer('population')->default(0);
             $table->timestamps();
         });
     }

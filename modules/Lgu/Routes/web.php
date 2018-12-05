@@ -29,7 +29,9 @@ Route::group(['middleware' => 'auth:lgu'], function() {
         Route::get('listing', "Listing")->name('center.listing');
         Route::post('registration', "Registration")->name('centers.registration');
         Route::get('{center}/detail', "Detail")->name('center.detail');
+        Route::post('{center}/household/registration', "Household\Registration")->name('household.register');
     });
+
 
     Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
         Route::get('listing', "Listing")->name('products.listing');
