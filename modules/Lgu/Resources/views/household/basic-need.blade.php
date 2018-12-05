@@ -7,7 +7,7 @@
 <div class="row-fluid" id="app">
     <span>Maximum # of Members: {{$household->total_members}}</span>
     @foreach($items as $item)
-        <p>{{ $item->categoryName() }} - {{ $item->quantity }} - {{$item->unit}}</p>
+        <p>{{ $item->categoryName() }} - {{ $item->subcategoryName() }} - {{ $item->quantity }} - {{$item->unit}}</p>
     @endforeach
 </div>
 @stop
