@@ -14,6 +14,7 @@
                 <thead class="bg-blue-gradient">
                 <tr>
                     <th>Name</th>
+                    <th>Population</th>
                     <th>Infrastructure</th>
                     <th>Barangay</th>
                     <th>City</th>
@@ -45,6 +46,7 @@
                 "deferRender": true,
                 "columns": [
                     { "data": "name", "orderable": false, "searchable": true },
+                    { "data": "population", "orderable": false, "searchable": false },
                     { "data": "structure", "orderable": false, "searchable": true },
                     { "data": "barangay", "orderable": false, "searchable": true},
                     { "data": "city", "orderable": false, "searchable": true },
@@ -58,12 +60,13 @@
             //click rows
             $('#centers-table tbody').on('click', 'tr', function () {
                 const data = centersTable.row( this ).data();
-                window.location.href = ""+ data['slug'] +"/detail";
+                window.location.href = "/centers/"+ data['slug'] +"/detail";
             });
 
             setInterval(function() {
                 centersTable.ajax.reload();
             }, 10000);
         });
+
     </script>
 @endpush

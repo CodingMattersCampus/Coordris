@@ -24,7 +24,10 @@ Route::group(['middleware' => 'auth:ngo'], function() {
         return redirect()->route('ngo.centers.map');
     })->name('ngo.home');
 
-    Route::view('centers', 'ngo::center.map')->name('ngo.centers.map');
+    Route::group(['prefix' => 'centers', 'namespace' => "Center"], function () {
+        Route::view('map', 'ngo::center.map')->name('ngo.centers.map');
+        Route::get('{center}/detail', "Detail")->name('ngo.center.detail');
+    });
 
     Route::get('/product/listing', 'Warehouse\InventoryController')->name('ngo.product.listing');
 });

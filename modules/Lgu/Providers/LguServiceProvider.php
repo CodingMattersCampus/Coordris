@@ -130,6 +130,11 @@ class LguServiceProvider extends ServiceProvider
                     'url' => \route('disasters.listing'),
                     'icon' => 'warning',
                 ]);
+                $event->menu->add([
+                    'text' => 'Household Needs',
+                    'url' => \route('lgu.household.basic-needs'),
+                    'icon' => 'info',
+                ]);
                 $event->menu->add('PRODUCT SETTINGS');
                 $event->menu->add([
                     'text' => 'Products',

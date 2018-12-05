@@ -9,21 +9,24 @@
     <div class="box box-primary">
         <div class="box-header">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#forum">Forum</a></li>
-                <li><a data-toggle="tab" href="#item-request">Item Requests</a></li>
+                <li class="active"><a data-toggle="tab" href="#item-request">Item Requests</a></li>
                 <li><a data-toggle="tab" href="#household">Household Listing</a></li>
+                <li><a data-toggle="tab" href="#forum">Forum</a></li>
             </ul>
         </div>
         <div class="box-body">
             <div class="tab-content">
-                <div class="container-fluid tab-pane fade in active" id="forum">
-                    @include('lgu::center.partial.forum')
-                </div>
-                <div class="container-fluid tab-pane fade in" id="item-request">
-                    @include('lgu::center.partial.item-request')
+                <div class="container-fluid tab-pane fade in active" id="item-request">
+                    @include('ngo::center.partial.item-request')
+                    <div class="clearfix"></div>
                 </div>
                 <div class="container-fluid tab-pane fade in" id="household">
-                    @include('lgu::center.partial.household')
+                    @include('ngo::center.partial.household')
+                    <div class="clearfix"></div>
+                </div>
+                <div class="container-fluid tab-pane fade in" id="forum">
+                    @include('ngo::center.partial.forum')
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>

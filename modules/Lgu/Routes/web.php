@@ -48,4 +48,8 @@ Route::group(['middleware' => 'auth:lgu'], function() {
         Route::post('register', "Register")->name('disasters.registration');
         Route::get('listing', "Listing")->name('disasters.listing');
     });
+
+    Route::group(['prefix' => 'household', 'namespace' => "Household"], function () {
+        Route::get('basic-needs', "BasicNeed")->name('lgu.household.basic-needs');
+    });
 });

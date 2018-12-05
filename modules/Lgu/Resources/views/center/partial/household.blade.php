@@ -63,10 +63,8 @@
     $(function() {
         const householdTable = $('#household-table').DataTable({
             "dom": 'Bfrtip',
-            "buttons": [
-                'pageLength', 'pdf', 'csv'
-            ],
-            "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            "buttons": ['pageLength', 'csv'],
+            "lengthMenu": [[15, 30, 100, -1], [15, 30, 100, "All"]],
             "serverSide": true,
             "deferRender": true,
             "columns": [
@@ -76,6 +74,10 @@
             ],
             "ajax": "{{\route('api.center.household.listing', compact('center'))}}"
         });
+
+        setInterval(function() {
+            householdTable.ajax.reload();
+        }, 5000);
     });
 </script>
 @endpush
