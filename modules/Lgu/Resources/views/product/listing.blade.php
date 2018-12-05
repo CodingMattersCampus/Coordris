@@ -79,7 +79,7 @@
 <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
 <script>
     $(function() {
-        var table = $('#products-table').DataTable({
+        var productsTable = $('#products-table').DataTable({
             "dom": 'Bfrtip',
             "buttons": [
                 'pageLength', 'pdf', 'csv'
@@ -94,6 +94,10 @@
             ],
             "ajax": "{{\route('api.products.listing')}}"
         });
+
+        setInterval(function() {
+            productsTable.ajax.reload();
+        }, 5000);
     });
 </script>
 @endpush

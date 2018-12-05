@@ -109,7 +109,7 @@
 <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
 <script>
     $(function() {
-        var table = $('#centers-table').DataTable({
+        var centerTable = $('#centers-table').DataTable({
             "dom": 'Bfrtip',
             "buttons": ['pageLength'],
             "lengthMenu": [[50, 100, 250, -1], [50, 100, 250, "All"]],
@@ -130,9 +130,13 @@
         });
         //click rows
         $('#centers-table tbody').on('click', 'tr', function () {
-            var data = table.row( this ).data();
+            var data = centerTable.row( this ).data();
             window.location.href = ""+ data['slug'] +"/detail";
         });
+
+        setInterval(function() {
+            centerTable.ajax.reload();
+        }, 5000);
     });
 </script>
 @endpush
