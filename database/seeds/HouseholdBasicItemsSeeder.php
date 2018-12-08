@@ -12,9 +12,9 @@ class HouseholdBasicItemsSeeder extends Seeder
     public function run()
     {
         $support = \App\Models\HouseholdItemSupport::firstOrCreate([
-            'hh_support_code' => \Ramsey\Uuid\Uuid::uuid4()->toString(),
-            'total_members' => 4,
-            'days_of_support' => 1,
+            'hh_support_code' => "2dfeb085-06ae-426f-8abb-2a87d33de446",
+            'total_members' => 5,
+            'days_of_support' => 3,
         ]);
 
         \App\Models\Product\BasicNeededItem::firstOrCreate([

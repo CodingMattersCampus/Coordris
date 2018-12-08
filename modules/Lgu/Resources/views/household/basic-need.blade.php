@@ -9,6 +9,7 @@
     @foreach($items as $item)
         <p>{{ $item->categoryName() }} - {{ $item->subcategoryName() }} - {{ $item->quantity }} - {{$item->unit}}</p>
     @endforeach
+    {{--@php dd($specific->toArray());@endphp--}}
 </div>
 @stop
 @push('css')

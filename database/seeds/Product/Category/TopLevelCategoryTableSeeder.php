@@ -24,6 +24,11 @@ class TopLevelCategoryTableSeeder extends Seeder
         return [
             ['name' => "Food"],
             ['name' => "Non-Food"],
+            ['name' => "Male"],
+            ['name' => "Female"],
+
+            ['name' => "Toddler"],
+            ['name' => "Elderly"],            
         ];
     }
 }
