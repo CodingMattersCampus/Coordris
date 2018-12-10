@@ -122,6 +122,11 @@ class LguServiceProvider extends ServiceProvider
                 $event->menu->add('GENERAL SETTINGS');
                 $event->menu->add([
                     'text' => 'Evacuation Centers',
+                    'url' => \route('evacuation.centers.listing'),
+                    'icon' => 'home',
+                ]);
+                $event->menu->add([
+                    'text' => 'Center Details',
                     'url' => \route('center.listing'),
                     'icon' => 'home',
                 ]);

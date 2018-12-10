@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'COORDRIS - Center Detail')
+@section('title', 'EvacuationCenter')
 @section('content_header')
     <h1>{{$center->name}}</h1>
 @stop

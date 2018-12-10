@@ -15,9 +15,13 @@ class CreateDisasterCentersTable extends Migration
     {
         Schema::create('disaster_centers', function (Blueprint $table) {
             $table->increments('id');
+            $table->uuid('code')->unique();
             $table->uuid('center_code');
             $table->integer('support_duration')->default(3);
             $table->integer('disaster_id');
+            $table->integer('city_id');
+            $table->integer('population')->default(0);
+            $table->integer('capacity')->default(0);
             $table->timestamps();
         });
     }

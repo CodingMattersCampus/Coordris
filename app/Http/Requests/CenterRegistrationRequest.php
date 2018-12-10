@@ -24,12 +24,13 @@ class CenterRegistrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'  => "required|string",
-            'support_duration' => "required|integer",
-            'barangay_id' => "required|integer",
-            'infrastructure_id' => "required|integer",
-            'has_electricity_supply' => "required",
-            'has_water_supply' => "required",
+            'name'                      => "required|string",
+            'capacity'                  => "required|integer|min:1",
+            'barangay_id'               => "required|integer",
+            'infrastructure_id'         => "required|integer",
+            'has_electricity_supply'    => "required",
+            'has_water_supply'          => "required",
+            'has_network_coverage'      => "required",
         ];
     }
 }

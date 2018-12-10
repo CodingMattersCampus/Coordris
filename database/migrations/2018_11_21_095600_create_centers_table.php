@@ -23,7 +23,8 @@ class CreateCentersTable extends Migration
             $table->integer('city_id');
             $table->boolean('has_water_supply')->default(false);
             $table->boolean('has_electricity_supply')->default(false);
-            $table->integer('population')->default(0);
+            $table->boolean('has_network_coverage')->default(false);
+            $table->integer('capacity')->default(0);
             $table->timestamps();
         });
     }
