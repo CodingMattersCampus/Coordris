@@ -126,7 +126,7 @@ class LguServiceProvider extends ServiceProvider
                     'icon' => 'home',
                 ]);
                 $event->menu->add([
-                    'text' => 'Center Details',
+                    'text' => 'Infrastructure Listing',
                     'url' => \route('center.listing'),
                     'icon' => 'home',
                 ]);
