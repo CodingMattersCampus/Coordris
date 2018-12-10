@@ -2,11 +2,9 @@
 
 namespace App\Models\Product;
 
-use App\Models\Product\Category\MainCategory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Product\Category\Subcategory;
 
-class BasicNeededItem extends Model
+class SpecificNeededItem extends Model
 {
     protected $guarded = [];
 
