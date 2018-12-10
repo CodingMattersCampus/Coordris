@@ -20,6 +20,12 @@ class CreateHouseholdsTable extends Migration
             $table->string('spouse')->nullable();
             $table->integer('total_members')->default(1);
             $table->uuid('center_code');
+            $table->integer('total_infants')->default(0);
+            $table->integer('total_elderly')->default(0);
+            $table->integer('rice')->default(0);
+            $table->integer('canned_goods')->default(0);
+            $table->integer('noodles')->default(0);
+            $table->integer('water')->default(0);
             $table->timestamps();
         });
     }

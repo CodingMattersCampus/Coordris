@@ -5,6 +5,12 @@
             <th>Head of Family</th>
             <th>Spouse</th>
             <th>Members</th>
+            <th>Infants/Toddlers</th>
+            <th>Elderly</th>
+            <th>Rice</th>
+            <th>Canned Goods</th>
+            <th>Noodles</th>
+            <th>Water</th>
         </tr>
         </thead>
     </table>
@@ -19,9 +25,15 @@
                 "serverSide": true,
                 "deferRender": true,
                 "columns": [
-                    { "data": "head", "orderable": true, "searchable": true },
+                    { "data": "head", "orderable": false, "searchable": true },
                     { "data": "spouse", "orderable": false, "searchable": true },
-                    { "data": "total_members", "orderable": false, "searchable": true},
+                    { "data": "total_members", "orderable": false, "searchable": false},
+                    { "data": "total_infants", "orderable": false, "searchable": false},
+                    { "data": "total_elderly", "orderable": false, "searchable": false},
+                    { "data": "rice", "orderable": false, "searchable": false},
+                    { "data": "canned_goods", "orderable": false, "searchable": false},
+                    { "data": "noodles", "orderable": false, "searchable": false},
+                    { "data": "water", "orderable": false, "searchable": false},
                 ],
                 "ajax": "{{\route('api.center.household.listing', compact('center'))}}"
             });
