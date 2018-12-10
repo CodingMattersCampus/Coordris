@@ -34,3 +34,5 @@ Route::group(['prefix' => "lgu/{lgu}", 'namespace' => "Lgu"], function() {
         Route::get('centers', "Centers")->name('api.lgu.evacuation.centers');
     });
 });
+
+Route::get('lgu/evacuation/centers', "Center\EvacuationCenter")->name('api.evacuation.centers');
