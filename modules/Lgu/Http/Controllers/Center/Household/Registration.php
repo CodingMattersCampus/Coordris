@@ -2,14 +2,14 @@
 
 namespace Modules\Lgu\Http\Controllers\Center\Household;
 
+use App\Models\DisasterCenter;
 use Modules\Lgu\Http\Requests\Center\HouseholdRegistrationRequest;
-use App\Models\Center;
 use Illuminate\Routing\Controller;
 use App\Models\Household;
 
 class Registration extends Controller
 {
-    public function __invoke (HouseholdRegistrationRequest $request, Center $center)
+    public function __invoke (HouseholdRegistrationRequest $request, DisasterCenter $center)
     {
         $data = $request->post();
         unset($data["_token"]);
