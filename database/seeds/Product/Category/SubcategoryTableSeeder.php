@@ -73,6 +73,26 @@ class SubcategoryTableSeeder extends Seeder
             ['name' => "Male", 'main_category_id' => MainCategory::getIdByName("Clothing")],
 
             ['name' => "Flashlight", 'main_category_id' => MainCategory::getIdByName("Hand Tools")],
+
+            ['name' => "Canned Goods", 'main_category_id' => MainCategory::getIdByName("Halal Food")],
+            ['name' => "Canned Goods", 'main_category_id' => MainCategory::getIdByName("Non-Halal Food")],
+            ['name' => "Instant Packaged Goods", 'main_category_id' => MainCategory::getIdByName("Halal Food")],
+            ['name' => "Instant Packaged Goods", 'main_category_id' => MainCategory::getIdByName("Non-Halal Food")],
+
+            ['name' => "Chocolate Milk", 'main_category_id' => MainCategory::getIdByName("Food")],
+            ['name' => "Milk", 'main_category_id' => MainCategory::getIdByName("Food")],
+            ['name' => "Cereal Milk", 'main_category_id' => MainCategory::getIdByName("Food")],
+
+            ['name' => "Diapers", 'main_category_id' => MainCategory::getIdByName("Personal Hygiene")],
+            ['name' => "Soap", 'main_category_id' => MainCategory::getIdByName("Personal Hygiene")],
+
+            ['name' => "Sanitary Pads", 'main_category_id' => MainCategory::getIdByName("Young Teen")],
+            ['name' => "Sanitary Pads", 'main_category_id' => MainCategory::getIdByName("Teen")],
+            ['name' => "Sanitary Pads", 'main_category_id' => MainCategory::getIdByName("Young Adult")],
+            ['name' => "Sanitary Pads", 'main_category_id' => MainCategory::getIdByName("Middle-Aged Adult")],
+
+            ['name' => "Diapers", 'main_category_id' => MainCategory::getIdByName("Personal Hygiene")],
+            ['name' => "Milk", 'main_category_id' => MainCategory::getIdByName("Food")],
         ];
     }
 }
