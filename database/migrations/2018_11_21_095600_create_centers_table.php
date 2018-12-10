@@ -21,8 +21,6 @@ class CreateCentersTable extends Migration
             $table->integer('infrastructure_id');
             $table->integer('barangay_id');
             $table->integer('city_id');
-            $table->integer('disaster_id');
-            $table->integer('support_duration')->default(3);
             $table->boolean('has_water_supply')->default(false);
             $table->boolean('has_electricity_supply')->default(false);
             $table->integer('population')->default(0);
