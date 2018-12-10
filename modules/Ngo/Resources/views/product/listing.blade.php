@@ -54,7 +54,7 @@
 
         setInterval(function() {
             productsTable.ajax.reload()
-        }, 3000);
+        }, 10000);
     });
 </script>
 @endpush

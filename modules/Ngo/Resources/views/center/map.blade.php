@@ -13,15 +13,16 @@
             <table id="centers-table" class="table table-responsive table-striped table-hover">
                 <thead class="bg-blue-gradient">
                 <tr>
-                    <th>Name</th>
+                    <th>Center</th>
+                    <th>Disaster Support</th>
                     <th>Population</th>
-                    <th>Infrastructure</th>
+                    <th>Capacity</th>
                     <th>Barangay</th>
                     <th>City</th>
-                    <th>Disaster Support</th>
                     <th>Support Duration</th>
                     <th>Electricity Supply</th>
                     <th>Water Supply</th>
+                    <th>Network Coverage</th>
                 </tr>
                 </thead>
             </table>
@@ -45,27 +46,28 @@
                 "serverSide": true,
                 "deferRender": true,
                 "columns": [
-                    { "data": "name", "orderable": false, "searchable": true },
+                    { "data": "center", "orderable": false, "searchable": true },
+                    { "data": "disaster", "orderable": false, "searchable": true },
                     { "data": "population", "orderable": false, "searchable": false },
-                    { "data": "structure", "orderable": false, "searchable": true },
+                    { "data": "capacity", "orderable": false, "searchable": false },
                     { "data": "barangay", "orderable": false, "searchable": true},
                     { "data": "city", "orderable": false, "searchable": true },
-                    { "data": "support", "orderable": false, "searchable": true },
-                    { "data": "duration", "orderable": false, "searchable": false },
+                    { "data": "duration", "orderable": false, "searchable": true },
                     { "data": "electricity", "orderable": false, "searchable": false },
                     { "data": "water", "orderable": false, "searchable": false },
+                    { "data": "network", "orderable": false, "searchable": true },
                 ],
-                "ajax": "{{\route('api.centers.listing')}}"
+                "ajax": "{{\route('api.evacuation.centers')}}"
             });
             //click rows
             $('#centers-table tbody').on('click', 'tr', function () {
                 const data = centersTable.row( this ).data();
-                window.location.href = "/centers/"+ data['slug'] +"/detail";
+                window.location.href = "/centers/"+ data['code'] +"/detail";
             });
 
             setInterval(function() {
                 centersTable.ajax.reload();
-            }, 5000);
+            }, 10000);
         });
 
     </script>

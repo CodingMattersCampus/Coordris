@@ -2,6 +2,7 @@
 
 namespace Modules\Ngo\Transformers\Warehouse;
 
+use App\Models\Product\ProductCategory;
 use Illuminate\Http\Resources\Json\Resource;
 
 class Inventory extends Resource
@@ -14,11 +15,13 @@ class Inventory extends Resource
      */
     public function toArray($request)
     {
+        $category = ProductCategory::find($this->product_id)->first();
+
         return [
             'name'      => $this->product()->name,
             'brand'     => $this->product()->brandName(),
-            'category'  => $this->product()->categoryName(),
-            'subcategory' => $this->product()->subcategoryName(),
+            'category'  => $category->categoryName(),
+            'subcategory' => $category->subcategoryName(),
             'stocks'    => $this->quantity,
         ];
     }

@@ -2,7 +2,7 @@
 
 namespace Modules\Api\Http\Controllers\Center\Household;
 
-use App\Models\Center;
+use App\Models\DisasterCenter;
 use App\Models\Household;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Routing\Controller;
@@ -12,7 +12,7 @@ use Yajra\DataTables\DataTables;
 
 class Listing extends Controller
 {
-    public function __invoke(Center $center)
+    public function __invoke(DisasterCenter $center)
     {
         return DataTables::of(
             Collection::make(
