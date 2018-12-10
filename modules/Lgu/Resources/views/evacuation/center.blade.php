@@ -6,7 +6,7 @@
 @section('content')
 <div id="app" class="row">
     <div class="col-md-3">
-        <form action="{{\route('centers.registration')}}" method="POST">
+        <form action="{{route('evacuation.center.registration')}}" method="POST">
             @csrf
             @if ($errors->any())
                 <div class="alert alert-danger text-xs">
@@ -18,48 +18,29 @@
                 </div>
             @endif
             <div class="form-group">
-                <label for="#centerName">Center Name:</label>
-                <input class="form-control" type="text" name="name" id="centerName" placeholder="Example: Sendong Survivors Center">
-            </div>
-            <div class="form-group">
-                <label for="#barangay">Select Baranagay:</label>
-                <select id="barangay" name="barangay_id" class="form-control">
-                    @foreach($barangays as $barangay)
-                        <option class="form-control" value="{{$barangay->id}}"> {{$barangay->name}}</option>
+                <label for="#center">Select Center:</label>
+                <select id="center" name="center_code" class="form-control">
+                    @foreach($centers as $center)
+                        <option class="form-control" value="{{$center->code}}"> {{$center->name}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="#infrastructure">Select Infrastructure:</label>
-                <select id="infrastructure" name="infrastructure_id" class="form-control">
-                    @foreach($infrastructures as $infrastructure)
-                        <option class="form-control" value="{{$infrastructure->id}}"> {{$infrastructure->name}}</option>
+                <label for="#disaster">Select Disaster:</label>
+                <select id="disaster" name="disaster_id" class="form-control">
+                    @foreach($disasters as $disaster)
+                        <option class="form-control" value="{{$disaster->id}}"> {{$disaster->name}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
-                <label for="#capacity">Capacity (per person):</label>
-                <input type="number" class="form-control" id="capacity" name="capacity" placeholder="10">
-            </div>
-            <div class="form-group">
-                <label for="#electricity">Has Electricity Supply:</label>
-                <select id="electricity" name="has_electricity_supply" class="form-control">
-                    <option class="form-control" value="1"> Yes </option>
-                    <option class="form-control" value="0"> No </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="#water-supply">Has Water Supply:</label>
-                <select id="water-supply" name="has_water_supply" class="form-control">
-                    <option class="form-control" value="1"> Yes </option>
-                    <option class="form-control" value="0"> No </option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="#network-coverage">Has Network Coverage:</label>
-                <select id="network-coverage" name="has_network_coverage" class="form-control">
-                    <option class="form-control" value="1"> Yes </option>
-                    <option class="form-control" value="0"> No </option>
+                <label for="#duration">Support Duration (in Days):</label>
+                <select id="duration" name="support_duration" class="form-control">
+                    <option class="form-control" value="1"> 1 Day</option>
+                    <option class="form-control" value="2"> 2 Days</option>
+                    <option class="form-control" value="3" selected> 3 Days</option>
+                    <option class="form-control" value="4"> 4 Days</option>
+                    <option class="form-control" value="5"> 5 Days</option>
                 </select>
             </div>
             <div class="form-goup">
@@ -76,11 +57,13 @@
                 <table id="centers-table" class="table table-responsive table-striped table-hover">
                     <thead class="bg-blue-gradient">
                     <tr>
-                        <th>Name</th>
-                        <th>Infrastructure</th>
+                        <th>Center</th>
+                        <th>Disaster Support</th>
+                        <th>Population</th>
+                        <th>Capacity</th>
                         <th>Barangay</th>
                         <th>City</th>
-                        <th>Capacity</th>
+                        <th>Support Duration</th>
                         <th>Electricity Supply</th>
                         <th>Water Supply</th>
                         <th>Network Coverage</th>
@@ -101,23 +84,31 @@
 <script type="text/javascript" src="{{asset('vendor/DataTables/datatables.min.js')}}"></script>
 <script>
     $(function () {
-        var centerTable = $('#centers-table').DataTable({
+        const centerTable = $('#centers-table').DataTable({
             "dom": 'Bfrtip',
             "buttons": ['pageLength'],
             "lengthMenu": [[50, 100, 250, -1], [50, 100, 250, "All"]],
             "serverSide": true,
             "deferRender": true,
             "columns": [
-                { "data": "name", "orderable": false, "searchable": true },
-                { "data": "structure", "orderable": false, "searchable": true },
+                { "data": "center", "orderable": false, "searchable": true },
+                { "data": "disaster", "orderable": false, "searchable": true },
+                { "data": "population", "orderable": false, "searchable": false },
+                { "data": "capacity", "orderable": false, "searchable": false },
                 { "data": "barangay", "orderable": false, "searchable": true},
                 { "data": "city", "orderable": false, "searchable": true },
-                { "data": "capacity", "orderable": false, "searchable": false },
+                { "data": "duration", "orderable": false, "searchable": true },
                 { "data": "electricity", "orderable": false, "searchable": false },
                 { "data": "water", "orderable": false, "searchable": false },
                 { "data": "network", "orderable": false, "searchable": true },
             ],
-            "ajax": "{{\route('api.lgu.centers.listing', \compact('lgu'))}}"
+            "ajax": "{{\route('api.lgu.evacuation.centers', \compact('user'))}}"
+        });
+
+        //click rows
+        $('#centers-table tbody').on('click', 'tr', function () {
+            const data = centerTable.row( this ).data();
+            window.location.href = "/evacuation/centers/"+ data['code'] +"/detail";
         });
     });
 </script>

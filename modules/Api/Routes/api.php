@@ -23,3 +23,14 @@ Route::group(['namespace' => "Center", 'prefix' => 'centers'], function () {
         Route::get('{center}/household/listing', "Listing")->name('api.center.household.listing');
     });
 });
+
+
+Route::group(['prefix' => "lgu/{lgu}", 'namespace' => "Lgu"], function() {
+    Route::group(['prefix' => 'centers', 'namespace' => "Center"], function() {
+        Route::get('listing', "Listing")->name('api.lgu.centers.listing');
+    });
+
+    Route::group(['prefix' => 'evacuation', "namespace" => "Evacuation"], function() {
+        Route::get('centers', "Centers")->name('api.lgu.evacuation.centers');
+    });
+});

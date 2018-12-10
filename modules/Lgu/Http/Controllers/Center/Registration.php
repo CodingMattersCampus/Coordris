@@ -31,6 +31,6 @@ class Registration extends Controller
             'lgu_id' => $user->getCityId(),
         ]);
 
-        return redirect()->route('center.detail', compact('center'));
+        return redirect()->route('center.listing');
     }
 }

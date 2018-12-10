@@ -32,6 +32,11 @@ Route::group(['middleware' => 'auth:lgu'], function() {
         Route::post('{center}/household/registration', "Household\Registration")->name('household.register');
     });
 
+    Route::group(['prefix' => 'evacuation', 'namespace' => "Evacuation"], function () {
+        Route::get('centers', "EvacuationCenter")->name('evacuation.centers.listing');
+        Route::post('centers/registration', "CenterRegistration")->name('evacuation.center.registration');
+        Route::get('centers/{evacuation}/detail', "EvacuationDetail")->name('evacuation.center.detail');
+    });
 
     Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {
         Route::get('listing', "Listing")->name('products.listing');

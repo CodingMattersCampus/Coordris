@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('{lgu}/centers/listing', "Lgu\Center\Listing@getAllAsResourceCollection")->name('api.lgu.centers.listing');
 Route::get('/centers/listing', "Center\Listing@getAllAsResourceCollection")->name('api.centers.listing');
 
 Route::get('disasters/listing', "Disaster\Listing@getAllAsResourceCollection")->name('api.disasters.listing');
