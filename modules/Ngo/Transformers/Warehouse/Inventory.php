@@ -15,8 +15,7 @@ class Inventory extends Resource
      */
     public function toArray($request)
     {
-        $category = ProductCategory::find($this->product_id)->first();
-
+        $category = ProductCategory::where(['product_id' => $this->product_id])->first();
         return [
             'name'      => $this->product()->name,
             'brand'     => $this->product()->brandName(),
