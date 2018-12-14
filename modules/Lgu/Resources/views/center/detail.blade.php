@@ -17,7 +17,7 @@
         <div class="box-body">
             <div class="tab-content">
                 <div class="container-fluid tab-pane fade in active" id="household">
-                    @include('lgu::center.partial.household', compact('center'))
+                    @include('lgu::center.partial.household', compact('center', 'ngo'))
                 </div>
                 <div class="container-fluid tab-pane fade in" id="item-request">
                     @include('lgu::center.partial.item-request', compact('center'))

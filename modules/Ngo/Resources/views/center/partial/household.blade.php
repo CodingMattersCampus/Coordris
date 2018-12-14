@@ -44,5 +44,27 @@
                 householdTable.ajax.reload();
             }, 5000);
         });
+
+        const dispatch = function(centerId, householdId) {
+
+            $.ajax({
+                'type': "POST",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                dataType: "json",
+                url: "{{\route("ngo.warehouse.items.dispatch", compact('ngo'))}}",
+                data: {
+                    'center'    : centerId,
+                    'household' : householdId,
+                },
+                success(response) {
+                    location.reload();
+                },
+                error(response) {
+
+                }
+            });
+        };
     </script>
 @endpush
