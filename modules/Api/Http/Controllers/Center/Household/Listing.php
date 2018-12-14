@@ -22,6 +22,14 @@ class Listing extends Controller
                     )
                 )
             )
-        )->make();
+        )->addColumn('action', function ($household) {
+            if (!$household['received'] )
+                return '<a class="btn btn-xs btn-success" onclick="alert('.$household["id"] .')"> DISPATCH </a>';
+            return "";
+        })->setRowClass(function (array $household) {
+            if (!$household['received']) {
+                return 'alert alert-warning';
+            }
+        })->make();
     }
 }
