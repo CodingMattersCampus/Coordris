@@ -9,22 +9,22 @@
     <tbody>
     <tr>
         <td>Rice</td>
-        <td>{{$center->households()->pluck('rice')->sum()}}</td>
+        <td>{{$center->households()->pluck('rice')->sum()}} Kilos</td>
         <td></td>
     </tr>
     <tr>
         <td>Canned Goods</td>
-        <td>{{$center->households()->pluck('canned_goods')->sum()}}</td>
+        <td>{{$center->households()->pluck('canned_goods')->sum()}} Pieces</td>
         <td></td>
     </tr>
     <tr>
         <td>Noodles</td>
-        <td>{{$center->households()->pluck('noodles')->sum()}}</td>
+        <td>{{$center->households()->pluck('noodles')->sum()}} Pieces</td>
         <td></td>
     </tr>
     <tr>
         <td>Water</td>
-        <td>{{$center->households()->pluck('water')->sum()}}</td>
+        <td>{{$center->households()->pluck('water')->sum()}} Liters</td>
         <td></td>
     </tr>
     </tbody>
