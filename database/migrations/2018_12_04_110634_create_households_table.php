@@ -26,6 +26,7 @@ class CreateHouseholdsTable extends Migration
             $table->integer('canned_goods')->default(0);
             $table->integer('noodles')->default(0);
             $table->integer('water')->default(0);
+            $table->boolean('received')->default(false);
             $table->timestamps();
         });
     }
