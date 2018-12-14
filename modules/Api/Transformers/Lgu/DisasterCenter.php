@@ -4,6 +4,7 @@ namespace Modules\Api\Transformers\Lgu;
 
 use App\Models\Center;
 use App\Models\Disaster\Disaster;
+use App\Models\Household;
 use Illuminate\Http\Resources\Json\Resource;
 
 class DisasterCenter extends Resource
@@ -18,10 +19,11 @@ class DisasterCenter extends Resource
     {
         $center = Center::where(['code' => $this->center_code])->first();
         $disaster = Disaster::find($this->disaster_id);
+        $household = Household::where(['center_code' => $this->code])->get();
 
         return [
             'code'          => $this->code,
-            'population'    => $this->population,
+            'population'    => $this->population . " (" . $household->count(). " family)",
             'capacity'      => $this->capacity,
             'center'        => $center->name,
             'disaster'      => $disaster->name,

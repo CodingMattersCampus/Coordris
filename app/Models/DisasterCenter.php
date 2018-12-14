@@ -12,4 +12,9 @@ class DisasterCenter extends Model
     {
         return 'code';
     }
+
+    public function households()
+    {
+        return $this->hasMany(Household::class, 'center_code', 'code');
+    }
 }

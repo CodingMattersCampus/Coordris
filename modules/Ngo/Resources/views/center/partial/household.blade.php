@@ -11,6 +11,7 @@
             <th>Canned Goods</th>
             <th>Noodles</th>
             <th>Water</th>
+            <th>Action</th>
         </tr>
         </thead>
     </table>
@@ -34,6 +35,7 @@
                     { "data": "canned_goods", "orderable": false, "searchable": false},
                     { "data": "noodles", "orderable": false, "searchable": false},
                     { "data": "water", "orderable": false, "searchable": false},
+                    { "data": "action", "orderable": false, "searchable": false},
                 ],
                 "ajax": "{{\route('api.center.household.listing', compact('center'))}}"
             });

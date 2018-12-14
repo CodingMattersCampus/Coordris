@@ -21,6 +21,10 @@ class EvacuationCenter extends Controller
                     )
                 )
             )
-        )->make(true);
+        )->setRowClass(function (array $center) {
+            if ($center['population'] >= $center['capacity']) {
+                return 'alert alert-danger';
+            }
+        })->make(true);
     }
 }

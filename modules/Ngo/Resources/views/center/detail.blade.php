@@ -17,11 +17,11 @@
         <div class="box-body">
             <div class="tab-content">
                 <div class="container-fluid tab-pane fade in active" id="item-request">
-                    @include('ngo::center.partial.item-request')
+                    @include('ngo::center.partial.item-request', compact('center'))
                     <div class="clearfix"></div>
                 </div>
                 <div class="container-fluid tab-pane fade in" id="household">
-                    @include('ngo::center.partial.household')
+                    @include('ngo::center.partial.household', compact('center'))
                     <div class="clearfix"></div>
                 </div>
                 <div class="container-fluid tab-pane fade in" id="forum">
