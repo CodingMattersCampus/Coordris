@@ -1,3 +1,4 @@
+import Datepicker from 'vuejs-datepicker';
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -31,6 +32,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        Datepicker
+    }
 });
