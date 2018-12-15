@@ -30,4 +30,5 @@ Route::group(['middleware' => 'auth:ngo'], function() {
     });
 
     Route::get('/product/listing', 'Warehouse\InventoryController')->name('ngo.product.listing');
+    Route::post('warehouse/{ngo}/items/dispatch', 'Warehouse\Item\Dispatch')->name('ngo.warehouse.items.dispatch');
 });
