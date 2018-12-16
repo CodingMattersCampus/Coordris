@@ -24,7 +24,7 @@
                     @include('lgu::center.partial.household', compact('center'))
                 </div>
                 <div class="container-fluid tab-pane fade in" id="item-request">
-                    @include('lgu::center.partial.item-request')
+                    @include('lgu::center.partial.item-request', compact('center', 'given'))
                 </div>
                 <div class="container-fluid tab-pane fade in" id="forum">
                     @include('lgu::center.partial.forum')
