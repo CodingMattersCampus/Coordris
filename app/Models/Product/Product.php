@@ -37,6 +37,6 @@ class Product extends Model
 
     public static function getIdByName(string $name)
     {
-        return self::whereName($name)->first()->id;
+        return optional(self::whereName($name)->first())->id ?? 0;
     }
 }
