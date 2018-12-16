@@ -25,6 +25,18 @@ class VolunteerTableSeeder extends Seeder
                 'password' => \Illuminate\Support\Facades\Hash::make("secret"),
                 'remember_token' => str_random(),
             ],
+            [
+                'name' => "prc",
+                'email' => "prc@organization.com",
+                'password' => \Illuminate\Support\Facades\Hash::make("secret"),
+                'remember_token' => str_random(),
+            ],
+            [
+                'name' => "ecoweb",
+                'email' => "ecoweb@organization.com",
+                'password' => \Illuminate\Support\Facades\Hash::make("secret"),
+                'remember_token' => str_random(),
+            ],
         ];
     }
 }

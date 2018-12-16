@@ -36,6 +36,7 @@ Route::group(['middleware' => 'auth:lgu'], function() {
         Route::get('centers', "EvacuationCenter")->name('evacuation.centers.listing');
         Route::post('centers/registration', "CenterRegistration")->name('evacuation.center.registration');
         Route::get('centers/{evacuation}/detail', "EvacuationDetail")->name('evacuation.center.detail');
+        Route::post('center/{center}/status/update', "CenterStatusUpdateController")->name('center.status.update');
     });
 
     Route::group(['prefix' => 'products', 'namespace' => "Product"], function () {

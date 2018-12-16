@@ -17,7 +17,7 @@ class EvacuationCenter extends Controller
             Collection::make(
                 new DisasterCenterCollection(
                     new DisasterCenterResource(
-                        DisasterCenter::all()
+                        DisasterCenter::where(["status" => true])->get()
                     )
                 )
             )

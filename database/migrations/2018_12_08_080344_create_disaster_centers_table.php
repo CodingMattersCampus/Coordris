@@ -22,6 +22,7 @@ class CreateDisasterCentersTable extends Migration
             $table->integer('city_id');
             $table->integer('population')->default(0);
             $table->integer('capacity')->default(0);
+            $table->boolean('status')->default(true);            
             $table->timestamps();
         });
     }

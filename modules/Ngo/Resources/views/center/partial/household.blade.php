@@ -7,10 +7,10 @@
             <th>Members</th>
             <th>Infants/Toddlers</th>
             <th>Elderly</th>
-            <th>Rice</th>
-            <th>Canned Goods</th>
-            <th>Noodles</th>
-            <th>Water</th>
+            <th>Rice (kls)</th>
+            <th>Canned Goods (pcs)</th>
+            <th>Noodles (pcs)</th>
+            <th>Water (L)</th>
             <th>Action</th>
         </tr>
         </thead>

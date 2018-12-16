@@ -54,7 +54,7 @@
                 <h4 class="box-title text-capitalize">Center Summary</h4>
             </div>
             <div class="box-body">
-                <table id="centers-table" class="table table-responsive table-striped table-hover">
+                <table id="centers-table" class="table table-responsive table-responsive-sm table-responsive-md table-striped table-hover">
                     <thead class="bg-blue-gradient">
                     <tr>
                         <th>Center</th>
@@ -67,6 +67,7 @@
                         <th>Electricity Supply</th>
                         <th>Water Supply</th>
                         <th>Network Coverage</th>
+                        <th>Status</th>
                     </tr>
                     </thead>
                 </table>
@@ -78,6 +79,7 @@
 @push('css')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" type="text/css" href="{{asset('vendor/DataTables/datatables.min.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('vendor/mdb/css/mdb.min.css')}}"/>
 @endpush
 @push('js')
 <script type="text/javascript" src="{{\asset('js/app.js')}}"></script>
@@ -100,7 +102,8 @@
                 { "data": "duration", "orderable": false, "searchable": true },
                 { "data": "electricity", "orderable": false, "searchable": false },
                 { "data": "water", "orderable": false, "searchable": false },
-                { "data": "network", "orderable": false, "searchable": true },
+                { "data": "network", "orderable": false, "searchable": false },
+                { "data": "status", "orderable": false, "searchable": false },
             ],
             "ajax": "{{\route('api.lgu.evacuation.centers', \compact('user'))}}"
         });
