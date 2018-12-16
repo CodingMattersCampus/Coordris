@@ -17,11 +17,13 @@ class Inventory extends Resource
     {
         $category = ProductCategory::where(['product_id' => $this->product_id])->first();
         return [
-            'name'      => $this->product()->name,
-            'brand'     => $this->product()->brandName(),
-            'category'  => $category->categoryName(),
-            'subcategory' => $category->subcategoryName(),
-            'stocks'    => $this->quantity,
+            'name'          => $this->product()->name,
+            'brand'         => $this->product()->brandName(),
+            'category'      => $category->categoryName(),
+            'subcategory'   => $category->subcategoryName(),
+            'stocks'        => $this->quantity,
+            'max_threshold' => $this->max_threshold,
+            'min_threshold' => $this->min_threshold,
         ];
     }
 }
