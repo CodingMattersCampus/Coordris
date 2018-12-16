@@ -29,27 +29,27 @@ class NgoInventorySeeder extends Seeder
     		[
     			"product_id" => Product::getIdByName("paborito"),
     			"volunteer_id" => Volunteer::getIdByName("volunteer"),
-    			"quantity" => 250,
+    			"quantity" => random_int(1, 500),
     		],
             [
                 "product_id" => Product::getIdByName("wave 1"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
-                "quantity" => 100,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("primary"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial_2.0"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
-                "quantity" => 450,
+                "quantity" => random_int(1, 500),
             ],
 
 
@@ -57,27 +57,27 @@ class NgoInventorySeeder extends Seeder
             [
                 "product_id" => Product::getIdByName("paborito"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => 250,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("wave 1"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => 100,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("primary"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial_2.0"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => 450,
+                "quantity" => random_int(1, 500),
             ],
 
 
@@ -86,27 +86,27 @@ class NgoInventorySeeder extends Seeder
             [
                 "product_id" => Product::getIdByName("paborito"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => 250,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("wave 1"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => 100,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("primary"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => 400,
+                "quantity" => random_int(1, 500),
             ],
             [
                 "product_id" => Product::getIdByName("partial_2.0"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => 450,
+                "quantity" => random_int(1, 500),
             ],
     	];
     }
