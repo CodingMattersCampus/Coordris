@@ -34,37 +34,31 @@ class ProductCategoryTableSeeder extends Seeder
     	return 
         [
         	[
-                "product_id" => Product::getIdByName("paborito"),
+                "product_id" => Product::getIdByName("Chicken Noodles"),
                 "category_id" => Category::getIdByName("Instant Packaged Goods"),
                 "subcategory_id" => Subcategory::getIdByName("Noodles"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
             ],
             [
-                "product_id" => Product::getIdByName("wave 1"),
+                "product_id" => Product::getIdByName("All-Night Dry"),
                 "category_id" => Category::getIdByName("Personal Hygiene"),
                 "subcategory_id" => Subcategory::getIdByName("Diapers"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Non-Food"),
             ],
             [
-                "product_id" => Product::getIdByName("primary"),
+                "product_id" => Product::getIdByName("Distilled Water"),
                 "category_id" => Category::getIdByName("Water"),
                 "subcategory_id" => Subcategory::getIdByName("Distilled"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
             ],
             [
-                "product_id" => Product::getIdByName("partial"),
+                "product_id" => Product::getIdByName("Corned Beef"),
                 "category_id" => Category::getIdByName("Canned Goods"),
                 "subcategory_id" => Subcategory::getIdByName("Beef Loaf"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
             ],
             [
-                "product_id" => Product::getIdByName("partial_2.0"),
-                "category_id" => Category::getIdByName("Instant Packaged Goods"),
-                "subcategory_id" => Subcategory::getIdByName("3-in-1 Coffee"),
-                "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
-            ],
-            [
-                "product_id" => Product::getIdByName("partial_2.0"),
+                "product_id" => Product::getIdByName("Blend and Brew"),
                 "category_id" => Category::getIdByName("Instant Packaged Goods"),
                 "subcategory_id" => Subcategory::getIdByName("3-in-1 Coffee"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Food"),

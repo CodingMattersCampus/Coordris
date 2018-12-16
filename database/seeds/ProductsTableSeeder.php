@@ -27,28 +27,28 @@ class ProductsTableSeeder extends Seeder
     {
         return [
             [
-                "sku" => md5("paborito".Brand::getIdByName("Maggi")),
-                "name" => "paborito",
+                "sku" => md5("Chicken Noodles".Brand::getIdByName("Maggi")),
+                "name" => "Chicken Noodles",
                 "brand_id" => Brand::getIdByName("Maggi"),
             ],
             [
-                "sku" => md5("wave 1".Brand::getIdByName("Pampers")),
-                "name" => "wave 1",
+                "sku" => md5("All-Night Dry".Brand::getIdByName("Pampers")),
+                "name" => "All-Night Dry",
                 "brand_id" => Brand::getIdByName("Pampers"),
             ],
             [
-                "sku" => md5("primary".Brand::getIdByName("Nature's Spring")),
-                "name" => "primary",
+                "sku" => md5("Distilled Water".Brand::getIdByName("Nature's Spring")),
+                "name" => "Distilled Water",
                 "brand_id" => Brand::getIdByName("Nature's Spring"),
             ],
             [
-                "sku" => md5("partial".Brand::getIdByName("Argentina")),
-                "name" => "partial",
+                "sku" => md5("Corned Beef".Brand::getIdByName("Argentina")),
+                "name" => "Corned Beef",
                 "brand_id" => Brand::getIdByName("Argentina"),
             ],
             [
-                "sku" => md5("partial_2.0".Brand::getIdByName("Nescafe")),
-                "name" => "partial_2.0",
+                "sku" => md5("Blend & Brew".Brand::getIdByName("Nescafe")),
+                "name" => "Blend and Brew",
                 "brand_id" => Brand::getIdByName("Nescafe"),
             ]
         ];

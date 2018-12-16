@@ -27,27 +27,27 @@ class NgoInventorySeeder extends Seeder
     {
     	return [
     		[
-    			"product_id" => Product::getIdByName("paborito"),
+    			"product_id" => Product::getIdByName("Chicken Noodles"),
     			"volunteer_id" => Volunteer::getIdByName("volunteer"),
     			"quantity" => random_int(1, 500),
     		],
             [
-                "product_id" => Product::getIdByName("wave 1"),
+                "product_id" => Product::getIdByName("All-Night Dry"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("primary"),
+                "product_id" => Product::getIdByName("Distilled Water"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial"),
+                "product_id" => Product::getIdByName("Corned Beef"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial_2.0"),
+                "product_id" => Product::getIdByName("Blend and Brew"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
@@ -55,27 +55,27 @@ class NgoInventorySeeder extends Seeder
 
 
             [
-                "product_id" => Product::getIdByName("paborito"),
+                "product_id" => Product::getIdByName("Chicken Noodles"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("wave 1"),
+                "product_id" => Product::getIdByName("All-Night Dry"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("primary"),
+                "product_id" => Product::getIdByName("Distilled Water"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial"),
+                "product_id" => Product::getIdByName("Corned Beef"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial_2.0"),
+                "product_id" => Product::getIdByName("Blend and Brew"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
@@ -84,27 +84,27 @@ class NgoInventorySeeder extends Seeder
 
 
             [
-                "product_id" => Product::getIdByName("paborito"),
+                "product_id" => Product::getIdByName("Chicken Noodles"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("wave 1"),
+                "product_id" => Product::getIdByName("All-Night Dry"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("primary"),
+                "product_id" => Product::getIdByName("Distilled Water"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial"),
+                "product_id" => Product::getIdByName("Corned Beef"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("partial_2.0"),
+                "product_id" => Product::getIdByName("Blend and Brew"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
