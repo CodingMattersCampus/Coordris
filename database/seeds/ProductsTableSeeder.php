@@ -50,6 +50,11 @@ class ProductsTableSeeder extends Seeder
                 "sku" => md5("Blend & Brew".Brand::getIdByName("Nescafe")),
                 "name" => "Blend and Brew",
                 "brand_id" => Brand::getIdByName("Nescafe"),
+            ],
+            [
+                "sku" => md5("Rice".Brand::getIdByName("Young Master")),
+                "name" => "Rice",
+                "brand_id" => Brand::getIdByName("Young Master"),
             ]
         ];
     }

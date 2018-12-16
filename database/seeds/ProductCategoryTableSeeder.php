@@ -63,6 +63,12 @@ class ProductCategoryTableSeeder extends Seeder
                 "subcategory_id" => Subcategory::getIdByName("3-in-1 Coffee"),
                 "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
             ],
+            [
+                "product_id" => Product::getIdByName("Rice"),
+                "category_id" => Category::getIdByName("Rice"),
+                "subcategory_id" => Subcategory::getIdByName("Milled Rice"),
+                "top_level_category_id" => TopLevelCategory::getIdByName("Food"),
+            ],
         ];
     }
 }
