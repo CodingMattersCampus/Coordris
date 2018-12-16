@@ -36,10 +36,8 @@
     $(function() {
         var productsTable = $('#products-table').DataTable({
             "dom": 'Bfrtip',
-            "buttons": [
-                'pageLength', 'pdf', 'csv'
-            ],
-            "lengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            "buttons": ['pageLength', 'pdf', 'csv'],
+            "lengthMenu": [[50, 250, 500, -1], [50, 250, 500, "All"]],
             "serverSide": true,
             "deferRender": true,
             "columns": [

@@ -33,6 +33,7 @@ class DisasterCenter extends Resource
             'water'         => ($center->has_water_supply == true) ? "Available" : "Not Available",
             'electricity'   => ($center->has_electricity_supply == true) ? "Available" : "Not Available",
             'network'       => ($center->has_network_coverage == true) ? "Available" : "Not Available",
+            'status'        => ($this->status == true) ? "Active" : "Not Active",
         ];
     }
 }

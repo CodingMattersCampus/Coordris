@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('title', 'EvacuationCenter')
 @section('content_header')
-    <h1>{{$center->name}}</h1>
+    <h1>{{ $center->centerName() }}</h1>
 @stop
 
 @section('content')

@@ -13,6 +13,11 @@ class DisasterCenter extends Model
         return 'code';
     }
 
+    public function centerName()
+    {
+        return (Center::where(['code' => $this->center_code])->first())->name;
+    }
+
     public function households()
     {
         return $this->hasMany(Household::class, 'center_code', 'code');

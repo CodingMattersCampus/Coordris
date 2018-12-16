@@ -25,10 +25,16 @@ class InventoryController extends Controller
             Collection::make(
                 new InventoryCollection(
                     new InventoryResource(
-                        Inventory::where(['volunteer_id'=> $ngo->id])->get()
+                        Inventory::where(['volunteer_id'=> $ngo->id])->orderBy('quantity', 'ASC')->get()
                     )
                 )
             )
-        )->make();
+        )->setRowClass(function (array $data) {
+            if ($data['stocks'] < $data['max_threshold']) {
+                return 'alert alert-danger';
+            } elseif ($data['stocks'] <= $data['min_threshold'] && $data['stocks'] >= $data['max_threshold']) {
+                return 'alert alert-warning';
+            }
+        })->make();
    }
 }

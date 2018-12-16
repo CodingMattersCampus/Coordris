@@ -18,6 +18,8 @@ class CreateInventoriesTable extends Migration
             $table->integer('product_id');
             $table->integer('volunteer_id');
             $table->integer('quantity');
+            $table->integer('max_threshold')->default(50);
+            $table->integer('min_threshold')->default(100);
             $table->timestamps();
         });
     }
