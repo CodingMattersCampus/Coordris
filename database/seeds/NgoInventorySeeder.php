@@ -51,6 +51,63 @@ class NgoInventorySeeder extends Seeder
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => 450,
             ],
+
+
+
+            [
+                "product_id" => Product::getIdByName("paborito"),
+                "volunteer_id" => Volunteer::getIdByName("prc"),
+                "quantity" => 250,
+            ],
+            [
+                "product_id" => Product::getIdByName("wave 1"),
+                "volunteer_id" => Volunteer::getIdByName("prc"),
+                "quantity" => 100,
+            ],
+            [
+                "product_id" => Product::getIdByName("primary"),
+                "volunteer_id" => Volunteer::getIdByName("prc"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial"),
+                "volunteer_id" => Volunteer::getIdByName("prc"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial_2.0"),
+                "volunteer_id" => Volunteer::getIdByName("prc"),
+                "quantity" => 450,
+            ],
+
+
+
+
+            [
+                "product_id" => Product::getIdByName("paborito"),
+                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+                "quantity" => 250,
+            ],
+            [
+                "product_id" => Product::getIdByName("wave 1"),
+                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+                "quantity" => 100,
+            ],
+            [
+                "product_id" => Product::getIdByName("primary"),
+                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial"),
+                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+                "quantity" => 400,
+            ],
+            [
+                "product_id" => Product::getIdByName("partial_2.0"),
+                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+                "quantity" => 450,
+            ],
     	];
     }
 }
