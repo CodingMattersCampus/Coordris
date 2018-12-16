@@ -132,7 +132,7 @@ class NgoServiceProvider extends ServiceProvider
                     'icon' => 'archive',
                 ]);$event->menu->add([
                     'text' => 'Dispatch Report',
-                    'url' => "#",
+                    'url' => \route('ngo.warehouse.report.dispatch'),
                     'icon' => 'truck',
                 ]);
             }

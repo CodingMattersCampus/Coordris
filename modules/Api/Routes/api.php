@@ -39,3 +39,5 @@ Route::get('lgu/evacuation/centers', "Center\EvacuationCenter")->name('api.evacu
 
 Route::get('lgu/center/{center}/status', "Evacuation\CenterStatusController")->name('api.center.status');
 
+
+Route::get('ngo/{ngo}/warehouse/dispatch/report', "Ngo\Report\Dispatch")->name('api.ngo.dispatch.report');
