@@ -32,7 +32,7 @@ class NgoInventorySeeder extends Seeder
     			"quantity" => random_int(1, 500),
     		],
             [
-                "product_id" => Product::getIdByName("All-Night Dry"),
+                "product_id" => Product::getIdByName("Rice"),
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
@@ -46,11 +46,11 @@ class NgoInventorySeeder extends Seeder
                 "volunteer_id" => Volunteer::getIdByName("volunteer"),
                 "quantity" => random_int(1, 500),
             ],
-            [
-                "product_id" => Product::getIdByName("Blend and Brew"),
-                "volunteer_id" => Volunteer::getIdByName("volunteer"),
-                "quantity" => random_int(1, 500),
-            ],
+//            [
+//                "product_id" => Product::getIdByName("Blend and Brew"),
+//                "volunteer_id" => Volunteer::getIdByName("volunteer"),
+//                "quantity" => random_int(1, 500),
+//            ],
 
 
 
@@ -60,7 +60,7 @@ class NgoInventorySeeder extends Seeder
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("All-Night Dry"),
+                "product_id" => Product::getIdByName("Rice"),
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
@@ -74,11 +74,11 @@ class NgoInventorySeeder extends Seeder
                 "volunteer_id" => Volunteer::getIdByName("prc"),
                 "quantity" => random_int(1, 500),
             ],
-            [
-                "product_id" => Product::getIdByName("Blend and Brew"),
-                "volunteer_id" => Volunteer::getIdByName("prc"),
-                "quantity" => random_int(1, 500),
-            ],
+//            [
+//                "product_id" => Product::getIdByName("Blend and Brew"),
+//                "volunteer_id" => Volunteer::getIdByName("prc"),
+//                "quantity" => random_int(1, 500),
+//            ],
 
 
 
@@ -89,7 +89,7 @@ class NgoInventorySeeder extends Seeder
                 "quantity" => random_int(1, 500),
             ],
             [
-                "product_id" => Product::getIdByName("All-Night Dry"),
+                "product_id" => Product::getIdByName("Rice"),
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
@@ -103,11 +103,11 @@ class NgoInventorySeeder extends Seeder
                 "volunteer_id" => Volunteer::getIdByName("ecoweb"),
                 "quantity" => random_int(1, 500),
             ],
-            [
-                "product_id" => Product::getIdByName("Blend and Brew"),
-                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
-                "quantity" => random_int(1, 500),
-            ],
+//            [
+//                "product_id" => Product::getIdByName("Blend and Brew"),
+//                "volunteer_id" => Volunteer::getIdByName("ecoweb"),
+//                "quantity" => random_int(1, 500),
+//            ],
     	];
     }
 }
