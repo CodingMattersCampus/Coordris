@@ -37,6 +37,7 @@ class BrandTableSeeder extends Seeder
             ['name' => "Nido"],
             ['name' => "Pampers"],
             ['name' => "E.Q."],
+            ['name' => "Young Master"],
         ];
     }
 }
